@@ -1,0 +1,53 @@
+  <script src="/src/gallery-rotator.js"></script>
+<!doctype html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Centrum Medyczne Endonova</title>
+    <meta name="description" content="Centrum Medyczne Endonova – minimalistyczna, elegancka opieka medyczna. Gastroskopia, kolonoskopia, konsultacje. Gdynia." />
+    <link rel="icon" type="image/svg+xml" href="/medical-icon.svg" />
+    <link rel="stylesheet" href="/src/style.css" />
+    <script type="module" src="/src/nav.js"></script>
+  </head>
+
+  <body>
+    <nav class="nav nav--main">
+  <div class="nav__overlay" id="navOverlay"></div>
+  <div class="nav__container">
+        <div class="nav__logo">
+          <a href="/">
+            <img src="/logo.png" alt="Endonova logo" />
+          </a>
+        </div>
+        <button class="nav__hamburger" aria-label="Pokaż menu" aria-expanded="false" aria-controls="navLinks">
+          <span class="nav__hamburger-bar"></span>
+          <span class="nav__hamburger-bar"></span>
+          <span class="nav__hamburger-bar"></span>
+        </button>
+        <ul class="nav__links" id="navLinks">
+          <li><a href="#uslugi">Usługi</a></li>
+          <li><a href="#" data-panel-open="cennik">Cennik</a></li>
+          <li><a href="#kontakt">Kontakt</a></li>
+        </ul>
+      </div>
+    </nav>
+
+        <section class="hero">
+      <div class="hero__container hero__container--vertical">
+        <p class="hero__desc hero__desc--lead">
+          Centrum Medyczne Endonova to nowoczesna placówka specjalizująca się w diagnostyce i leczeniu schorzeń przewodu pokarmowego.
+        </p>
+        <p class="hero__desc hero__desc--sub">
+          Oferujemy gastroskopię, kolonoskopię oraz konsultacje gastroenterologiczne na najwyższym poziomie – w komfortowych warunkach, z troską o bezpieczeństwo i spokój pacjenta.
+        </p>
+      </div>
+    </section>
+
+
+    <section class="gallery">
+  <img id="gallery-img" src="/carousel/cabin2.jpeg" alt="Wnętrze gabinetu Endonova" class="gallery__img" />
+    </section>
+
+  </body>
+</html>

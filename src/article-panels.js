@@ -9,13 +9,16 @@
   let focusHandler = null;
 
   function openPanel(panel) {
-    overlay.classList.add('is-active');
-    panel.classList.add('is-active');
-    lastActive = document.activeElement;
-    panel.focus();
-    document.body.style.overflow = 'hidden';
-    activePanel = panel;
-    trapFocus(panel);
+  overlay.classList.add('is-active');
+  panel.classList.add('is-active');
+  // Scroll panel to top on open
+  const content = panel.querySelector('.article-panel__content');
+  if (content) content.scrollTop = 0;
+  lastActive = document.activeElement;
+  panel.focus();
+  document.body.style.overflow = 'hidden';
+  activePanel = panel;
+  trapFocus(panel);
   }
   function closePanel() {
     if (!activePanel) return;

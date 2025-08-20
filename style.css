@@ -175,9 +175,10 @@ html {
 	border-bottom: 1px solid #eee;
 }
 .cennik-table td:last-child {
-	text-align: right;
-	font-weight: 600;
-	color: #111;
+		text-align: right;
+		font-weight: 600;
+		color: #111;
+		white-space: nowrap;
 }
 .cennik-panel__info {
 	font-size: 0.98rem;
@@ -186,16 +187,20 @@ html {
 	line-height: 1.5;
 }
 @media (max-width: 700px) {
-	.cennik-panel {
-		max-width: 100vw;
-		width: 100vw;
-		border-radius: 0;
-	}
-	.cennik-panel__title, .cennik-panel__close, .cennik-panel__content {
-		margin-left: 1rem;
-		padding-left: 1rem;
-		padding-right: 1rem;
-	}
+		.cennik-panel {
+			max-width: 100vw;
+			width: 100vw;
+			border-radius: 0;
+		}
+		.cennik-table td:last-child {
+			white-space: nowrap;
+			font-size: 1.13rem;
+		}
+		.cennik-panel__title, .cennik-panel__close, .cennik-panel__content {
+			margin-left: 1rem;
+			padding-left: 1rem;
+			padding-right: 1rem;
+		}
 }
 /* === NEW GALLERY SECTION === */
 .gallery {

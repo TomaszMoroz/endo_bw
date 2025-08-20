@@ -541,11 +541,15 @@ html {
 	box-shadow: none;
 	border: none;
 	width: 100vw;
-	position: sticky;
+	position: fixed;
 	top: 0;
 	left: 0;
 	z-index: 100;
 	margin: 0;
+	right: 0;
+}
+body {
+	padding-top: 96px;
 }
 
 .nav__container {

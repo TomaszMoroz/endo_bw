@@ -489,14 +489,37 @@ section.services {
 }
 
 @media (max-width: 700px) {
-	.nav__hamburger {
-		display: flex;
-		align-self: flex-start;
-		margin-left: 0;
-		margin-top: 0.2rem;
-		margin-bottom: 0.2rem;
-		height: 40px;
-	}
+		.nav__container {
+			display: flex !important;
+			flex-direction: row;
+			align-items: center;
+			justify-content: space-between;
+			padding: 1.2rem 1.2rem 1.2rem 1.2rem;
+			min-height: unset;
+			position: relative;
+		}
+		.nav__hamburger {
+			display: flex !important;
+			align-self: flex-start;
+			margin-left: 0;
+			margin-top: 0.2rem;
+			margin-bottom: 0.2rem;
+			height: 40px;
+			position: absolute;
+			right: 0.5rem;
+			top: 50%;
+			transform: translateY(-50%);
+			margin: 0;
+		}
+		.nav__hamburger-bar {
+			background: #111 !important;
+			height: 3px;
+			width: 28px;
+			margin: 3px 0;
+			border-radius: 2px;
+			box-shadow: none;
+			padding: 0;
+		}
 	.nav__logo {
 		z-index: 201;
 		background: transparent;

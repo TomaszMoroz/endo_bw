@@ -1,6 +1,25 @@
+/* === NEW GALLERY SECTION === */
+.gallery {
+	width: 100vw;
+	min-height: 65vh;
+	height: 65vh;
+	background-color: #111;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 0 auto 3.5rem auto;
+	box-sizing: border-box;
+	position: relative;
+}
+@media (max-width: 900px) {
+	.gallery {
+		min-height: 48vh;
+		height: 48vh;
+	}
+}
 /* === SECTION CONTAINERS === */
 section.hero,
-section.gallery,
+section.services 
 section.services {
 	width: 100vw;
 	max-width: 1200px;
@@ -8,7 +27,7 @@ section.services {
 	margin-right: auto;
 	box-sizing: border-box;
 	position: relative;
-	background: #fff;
+	background: transparent;
 }
 
 section.hero {
@@ -22,6 +41,7 @@ section.gallery {
 	margin-bottom: 3.5rem;
 	padding-top: 2.5rem;
 	padding-bottom: 2.5rem;
+	background: black;
 }
 section.services {
 	margin-top: 0;
@@ -107,16 +127,16 @@ section.services {
 }
 @media (max-width: 900px) {
 	.carousel__img {
-		width: 98vw;
-		max-width: 98vw;
-		height: 180px;
-	}
-	.carousel {
-		gap: 1.2rem;
-		min-height: 180px;
-	}
-	.carousel__arrow {
-		width: 36px;
+		width: 100vw;
+		min-height: 75vh;
+		height: 75vh;
+		background: #111;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin: 0;
+		box-sizing: border-box;
+		position: relative;
 		height: 36px;
 		font-size: 1.5rem;
 	}
@@ -381,49 +401,6 @@ body {
 				width: 120px;
 				height: 75px;
 			}
-}
-.gallery {
-	.gallery-lightbox {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		position: fixed;
-		top: 0;
-		left: 0;
-		width: 100vw;
-		height: 100vh;
-		background: rgba(0,0,0,0.88);
-		z-index: 9999;
-		transition: opacity 0.2s;
-	}
-	.gallery-lightbox__img {
-		max-width: 92vw;
-		max-height: 82vh;
-		border-radius: 1.2rem;
-		box-shadow: 0 8px 48px rgba(0,0,0,0.22);
-		background: #fff;
-		display: block;
-	}
-	.gallery-lightbox__close {
-		position: absolute;
-		top: 2.5rem;
-		right: 2.5rem;
-		background: none;
-		border: none;
-		color: #fff;
-		font-size: 2.8rem;
-		font-weight: 300;
-		cursor: pointer;
-		z-index: 10001;
-		transition: color 0.18s;
-	}
-	.gallery-lightbox__close:hover, .gallery-lightbox__close:focus {
-		color: #aaa;
-		outline: none;
-	}
-	display: block;
-	width: 32px;
-	height: 32px;
 }
 .carousel__arrow:hover,
 .carousel__arrow:focus {

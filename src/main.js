@@ -39,7 +39,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 });
-document.head.appendChild(animationStyles)
 
 // Minimalist sidepanel logic for overlays (cennik, artykuly, gastroskopia, kolonoskopia)
 document.addEventListener('DOMContentLoaded', () => {

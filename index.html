@@ -1,14 +1,14 @@
-  <script src="/src/gallery-rotator.js"></script>
 <!doctype html>
 <html lang="pl">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Centrum Medyczne Endonova</title>
-    <meta name="description" content="Centrum Medyczne Endonova – minimalistyczna, elegancka opieka medyczna. Gastroskopia, kolonoskopia, konsultacje. Gdynia." />
-    <link rel="icon" type="image/svg+xml" href="/medical-icon.svg" />
-    <link rel="stylesheet" href="/src/style.css" />
-    <script type="module" src="/src/nav.js"></script>
+    <meta name="description" content="Centrum Medyczne Endonova – Gastroskopia, kolonoskopia, konsultacje. Gdynia." />
+    <!-- <link rel="icon" type="image/svg+xml" href="/medical-icon.svg" /> -->
+  <link rel="stylesheet" href="/style.css" />
+  <script type="module" src="/src/nav.js"></script>
+  <script src="/src/gallery-rotator.js"></script>
   </head>
 
   <body>
@@ -53,8 +53,22 @@
     <!-- SERVICES SECTION -->
     <section class="services" id="uslugi">
       <h2 class="services__title">Usługi</h2>
+      <p class="services__desc">
+        W Centrum Medycznym Endonova oferujemy nowoczesną diagnostykę i leczenie schorzeń przewodu pokarmowego. Nasze usługi realizowane są w komfortowych warunkach, z troską o bezpieczeństwo i spokój pacjenta. Poniżej znajdziesz najważniejsze kategorie badań i konsultacji dostępnych w naszej placówce.
+      </p>
       <div class="services__tiles">
-        <!-- tutaj pojawią się kafelki usług -->
+        <div class="service-tile service-tile--gastroskopia">
+          <h3>Gastroskopia</h3>
+          <p>Nowoczesne badanie endoskopowe górnego odcinka przewodu pokarmowego. Pozwala na szybką i precyzyjną diagnostykę żołądka, przełyku i dwunastnicy.</p>
+        </div>
+        <div class="service-tile service-tile--kolonoskopia">
+          <h3>Kolonoskopia</h3>
+          <p>Badanie dolnego odcinka przewodu pokarmowego. Umożliwia wykrycie zmian w jelicie grubym, w tym polipów i stanów zapalnych.</p>
+        </div>
+        <div class="service-tile service-tile--konsultacje">
+          <h3>Konsultacje</h3>
+          <p>Specjalistyczne konsultacje gastroenterologiczne prowadzone przez doświadczonych lekarzy. Indywidualne podejście i kompleksowa opieka.</p>
+        </div>
       </div>
     </section>
 

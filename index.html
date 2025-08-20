@@ -65,11 +65,11 @@
         W Centrum Medycznym Endonova oferujemy nowoczesną diagnostykę i leczenie schorzeń przewodu pokarmowego. Nasze usługi realizowane są w komfortowych warunkach, z troską o bezpieczeństwo i spokój pacjenta. Poniżej znajdziesz najważniejsze kategorie badań i konsultacji dostępnych w naszej placówce.
       </p>
       <div class="services__tiles">
-        <div class="service-tile service-tile--gastroskopia">
+        <div class="service-tile service-tile--gastroskopia" data-article-open="gastroskopia">
           <h3>Gastroskopia</h3>
           <p>Nowoczesne badanie endoskopowe górnego odcinka przewodu pokarmowego. Pozwala na szybką i precyzyjną diagnostykę żołądka, przełyku i dwunastnicy.</p>
         </div>
-        <div class="service-tile service-tile--kolonoskopia">
+        <div class="service-tile service-tile--kolonoskopia" data-article-open="kolonoskopia">
           <h3>Kolonoskopia</h3>
           <p>Badanie dolnego odcinka przewodu pokarmowego. Umożliwia wykrycie zmian w jelicie grubym, w tym polipów i stanów zapalnych.</p>
         </div>
@@ -79,6 +79,42 @@
         </div>
       </div>
     </section>
+
+
+    <!-- Gastroskopia Article Panel -->
+    <aside class="article-panel" id="gastroskopiaPanel" aria-modal="true" tabindex="-1" role="dialog" aria-labelledby="gastroskopiaTitle" aria-describedby="gastroskopiaDesc">
+      <button class="article-panel__close" data-article-close aria-label="Powrót do strony głównej">&larr; Powrót</button>
+      <div class="article-panel__content">
+        <img src="/stomach1.jpeg" alt="Ilustracja gastroskopia" class="article-panel__img" />
+        <h2 class="article-panel__title" id="gastroskopiaTitle">Gastroskopia</h2>
+        <div class="article-panel__desc" id="gastroskopiaDesc">
+          <p>Gastroskopia (panendoskopia) endoskopia górnego odcinka przewodu pokarmowego GOPP – Najskuteczniejsza metoda diagnostyczna dla oceny górnego odcinka przewodu pokarmowego.</p>
+          <p>Dodatkowo w czasie badania istnieje możliwość pobrania wycinków, na przykład w celu wykrycia bakterii Helocobacter pylori, odpowiedzialnej za nawroty wrzodu, lub też w celu oceny mikroskopowej w przypadku stwierdzenia wrzodu żołądka, polipa albo innych zmian. Ma to zasadnicze znaczenie dla wyboru późniejszych sposobów leczenia.</p>
+          <p>Gastroskopia jest przeprowadzana w pozycji leżącej na lewym boku. Przed badaniem należy usunąć z jamy ustnej protezy zębowe (jeśli są). Po miejscowym znieczuleniu gardła z użyciem lidokainy w aerozolu, między zębami zostaje umieszczany plastikowy ustnik dla ochrony gastroskopu przed uszkodzeniem. Następnie wprowadzany jest do jamy ustnej i gardła gastroskop o średnicy ok. 1cm. Niekiedy konieczne jest przełknięcie. Ponieważ manewr ten jest nieprzyjemny i może mu towarzyszyć uczucie braku powietrza, nie należy wpadać w panikę, lecz starać się powoli oddychać. Badanie jest mało komfortowe, choć w zasadzie bezbolesne i trwa zaledwie kilka minut. Również pobieranie wycinków nie jest odczuwalne przez badanego.</p>
+          <p>Przed każdym badaniem gastroskop jest dezynfekowany w specjalnym urządzeniu, dlatego też zakażenie pacjenta w trakcie badania jest praktycznie niemożliwe. Wycinki błony śluzowej pobierane są przy użyciu sterylnych kleszczyków jednorazowych, co również zabezpiecza przed zakażeniem.</p>
+          <p>Powikłania gastroskopii zdarzają się niezwykle rzadko, są to między innymi perforacje przełyku (0,05% badań), krwawienia szczególnie po pobraniu wycinków lub usunięciu polipa. Są one natychmiastowo zaopatrywane klipsami lub koagulacją monopolarną lub argonową.</p>
+          <p>Z powodu miejscowego znieczulenia gardła nie wolno bezpośrednio po badaniu jeść ani pić, najczęściej przez ok. 30 minut (szczegółowych informacji co do spożywania posiłków i przyjmowania płynów po badaniu udziela pacjentowi personel wykonujący badanie).</p>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Kolonoskopia Article Panel -->
+    <aside class="article-panel" id="kolonoskopiaPanel" aria-modal="true" tabindex="-1" role="dialog" aria-labelledby="kolonoskopiaTitle" aria-describedby="kolonoskopiaDesc">
+      <button class="article-panel__close" data-article-close aria-label="Powrót do strony głównej">&larr; Powrót</button>
+      <div class="article-panel__content">
+        <img src="/largeint.jpeg" alt="Ilustracja kolonoskopia" class="article-panel__img" />
+        <h2 class="article-panel__title" id="kolonoskopiaTitle">Kolonoskopia</h2>
+        <div class="article-panel__desc" id="kolonoskopiaDesc">
+          <p>Kolonoskopia – endoskopia dolnego odcinka przewodu pokarmowego. Kolonoskopia to zabieg endoskopowy pozwalający na dokładną ocenę jelita grubego i m.in. na pobranie próbek (wycinków) ze zmian chorobowych oraz usunięcie zmian przedrakowych czyli polipów.</p>
+          <p>Wykonywana jest po odpowiednim przygotowaniu, które polega na oczyszczeniu z resztek pokarmowych jelita, najczęściej za pomocą doustnych środków przeczyszczających. Przygotowanie rozpoczyna się dzień przed zabiegiem – pacjent musi powstrzymać się od jedzenia i wypić zalecaną ilość środków przeczyszczających. Dopuszczalne jest jedynie picie płynów niegazowanych, klarownych w przeddzień badania.</p>
+          <p>W trakcie zabiegu lekarz używa giętkiego kolonoskopu, który wprowadzany jest przez odbyt do jelita grubego. Zabieg może być momentami bolesny. Ewentualny ból trzeba odróżnić od wzdęcia, które może wystąpić w związku z podawanym w czasie zabiegu powietrzem do światła jelita.</p>
+          <p>Aby uniknąć dyskomfortu i bólu, można wykonać zabieg w analgosedacji (podawane są leki przeciwbólowe oraz krótkodziałające leki nasenne). Kolonoskop jest dokładnie dezynfekowany przed każdym badaniem, co praktycznie uniemożliwia zakażenie pacjenta w trakcie badania.</p>
+          <p>W razie potrzeby w trakcie badania pobierane są przy użyciu specjalnych sterylnych, jednorazowych narzędzi próbki (wycinki) ze zmian chorobowych, które przekazywane są następnie do oceny histopatologicznej.</p>
+          <p>Zdarza się, że po badaniu występują zawroty głowy, zasłabnięcia, zaleca się pozostanie w placówce na ok. 30 min. W przypadku wykonywania kolonoskopii w analgosedacji zaleca się aby pacjent przychodziła na badanie z osobą towarzyszącą.</p>
+          <p>Powikłania zdarzają się niezmiernie rzadko (0,35%). Należą do nich perforacja (0,14-0,18%) lub krwawienie (0,008%). Jeżeli kolonoskopia wykonywana jest w analgosedacji, pacjent nie je i nie pije przez 2 godziny po badaniu.</p>
+        </div>
+      </div>
+    </aside>
 
     <!-- Overlay for modal panels -->
     <div class="modal-overlay" id="modalOverlay" tabindex="-1" aria-hidden="true"></div>
@@ -106,5 +142,39 @@
     </aside>
 
     <script src="/src/cennik-panel.js"></script>
+  <script src="/src/article-panels.js"></script>
+    <!-- Gastroskopia Article Panel -->
+    <aside class="article-panel" id="gastroskopiaPanel" aria-modal="true" tabindex="-1" role="dialog" aria-labelledby="gastroskopiaTitle" aria-describedby="gastroskopiaDesc">
+      <button class="article-panel__close" data-article-close aria-label="Powrót do strony głównej">&larr; Powrót</button>
+      <div class="article-panel__content">
+  <img src="/stomach1.jpeg" alt="Ilustracja gastroskopia" class="article-panel__img" />
+        <h2 class="article-panel__title" id="gastroskopiaTitle">Gastroskopia</h2>
+        <div class="article-panel__desc" id="gastroskopiaDesc">
+          <p>Gastroskopia (panendoskopia) endoskopia górnego odcinka przewodu pokarmowego GOPP – Najskuteczniejsza metoda diagnostyczna dla oceny górnego odcinka przewodu pokarmowego.</p>
+          <p>Dodatkowo w czasie badania istnieje możliwość pobrania wycinków, na przykład w celu wykrycia bakterii Helocobacter pylori, odpowiedzialnej za nawroty wrzodu, lub też w celu oceny mikroskopowej w przypadku stwierdzenia wrzodu żołądka, polipa albo innych zmian. Ma to zasadnicze znaczenie dla wyboru późniejszych sposobów leczenia.</p>
+          <p>Gastroskopia jest przeprowadzana w pozycji leżącej na lewym boku. Przed badaniem należy usunąć z jamy ustnej protezy zębowe (jeśli są). Po miejscowym znieczuleniu gardła z użyciem lidokainy w aerozolu, między zębami zostaje umieszczany plastikowy ustnik dla ochrony gastroskopu przed uszkodzeniem. Następnie wprowadzany jest do jamy ustnej i gardła gastroskop o średnicy ok. 1cm. Niekiedy konieczne jest przełknięcie. Ponieważ manewr ten jest nieprzyjemny i może mu towarzyszyć uczucie braku powietrza, nie należy wpadać w panikę, lecz starać się powoli oddychać. Badanie jest mało komfortowe, choć w zasadzie bezbolesne i trwa zaledwie kilka minut. Również pobieranie wycinków nie jest odczuwalne przez badanego.</p>
+          <p>Przed każdym badaniem gastroskop jest dezynfekowany w specjalnym urządzeniu, dlatego też zakażenie pacjenta w trakcie badania jest praktycznie niemożliwe. Wycinki błony śluzowej pobierane są przy użyciu sterylnych kleszczyków jednorazowych, co również zabezpiecza przed zakażeniem.</p>
+          <p>Powikłania gastroskopii zdarzają się niezwykle rzadko, są to między innymi perforacje przełyku (0,05% badań), krwawienia szczególnie po pobraniu wycinków lub usunięciu polipa. Są one natychmiastowo zaopatrywane klipsami lub koagulacją monopolarną lub argonową.</p>
+          <p>Z powodu miejscowego znieczulenia gardła nie wolno bezpośrednio po badaniu jeść ani pić, najczęściej przez ok. 30 minut (szczegółowych informacji co do spożywania posiłków i przyjmowania płynów po badaniu udziela pacjentowi personel wykonujący badanie).</p>
+        </div>
+      </div>
+    </aside>
+    <!-- Kolonoskopia Article Panel -->
+    <aside class="article-panel" id="kolonoskopiaPanel" aria-modal="true" tabindex="-1" role="dialog" aria-labelledby="kolonoskopiaTitle" aria-describedby="kolonoskopiaDesc">
+      <button class="article-panel__close" data-article-close aria-label="Powrót do strony głównej">&larr; Powrót</button>
+      <div class="article-panel__content">
+  <img src="/largeint.jpeg" alt="Ilustracja kolonoskopia" class="article-panel__img" />
+        <h2 class="article-panel__title" id="kolonoskopiaTitle">Kolonoskopia</h2>
+        <div class="article-panel__desc" id="kolonoskopiaDesc">
+          <p>Kolonoskopia – endoskopia dolnego odcinka przewodu pokarmowego. Kolonoskopia to zabieg endoskopowy pozwalający na dokładną ocenę jelita grubego i m.in. na pobranie próbek (wycinków) ze zmian chorobowych oraz usunięcie zmian przedrakowych czyli polipów.</p>
+          <p>Wykonywana jest po odpowiednim przygotowaniu, które polega na oczyszczeniu z resztek pokarmowych jelita, najczęściej za pomocą doustnych środków przeczyszczających. Przygotowanie rozpoczyna się dzień przed zabiegiem – pacjent musi powstrzymać się od jedzenia i wypić zalecaną ilość środków przeczyszczających. Dopuszczalne jest jedynie picie płynów niegazowanych, klarownych w przeddzień badania.</p>
+          <p>W trakcie zabiegu lekarz używa giętkiego kolonoskopu, który wprowadzany jest przez odbyt do jelita grubego. Zabieg może być momentami bolesny. Ewentualny ból trzeba odróżnić od wzdęcia, które może wystąpić w związku z podawanym w czasie zabiegu powietrzem do światła jelita.</p>
+          <p>Aby uniknąć dyskomfortu i bólu, można wykonać zabieg w analgosedacji (podawane są leki przeciwbólowe oraz krótkodziałające leki nasenne). Kolonoskop jest dokładnie dezynfekowany przed każdym badaniem, co praktycznie uniemożliwia zakażenie pacjenta w trakcie badania.</p>
+          <p>W razie potrzeby w trakcie badania pobierane są przy użyciu specjalnych sterylnych, jednorazowych narzędzi próbki (wycinki) ze zmian chorobowych, które przekazywane są następnie do oceny histopatologicznej.</p>
+          <p>Zdarza się, że po badaniu występują zawroty głowy, zasłabnięcia, zaleca się pozostanie w placówce na ok. 30 min. W przypadku wykonywania kolonoskopii w analgosedacji zaleca się aby pacjent przychodziła na badanie z osobą towarzyszącą.</p>
+          <p>Powikłania zdarzają się niezmiernie rzadko (0,35%). Należą do nich perforacja (0,14-0,18%) lub krwawienie (0,008%). Jeżeli kolonoskopia wykonywana jest w analgosedacji, pacjent nie je i nie pije przez 2 godziny po badaniu.</p>
+        </div>
+      </div>
+    </aside>
   </body>
 </html>

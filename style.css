@@ -1,3 +1,99 @@
+/* === ARTICLE PANELS === */
+.article-panel {
+			position: fixed;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%) scale(0.98);
+			height: auto;
+			min-height: 320px;
+			width: 100vw;
+			max-width: 540px;
+			max-height: 90vh;
+			overflow-y: auto;
+			background: #fff;
+			box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+			z-index: 1300;
+			transition: opacity 0.35s cubic-bezier(.4,0,.2,1), transform 0.35s cubic-bezier(.4,0,.2,1);
+			display: none;
+			flex-direction: column;
+			outline: none;
+			border-radius: 1.2rem;
+			padding: 2.5rem 2rem 2rem 2rem;
+			box-sizing: border-box;
+}
+	.article-panel.is-active {
+			opacity: 1;
+			transform: translate(-50%, -50%) scale(1);
+			display: flex !important;
+			z-index: 1300;
+}
+.article-panel__close {
+			align-self: flex-end;
+			background: none;
+			border: none;
+			color: #111;
+			font-size: 1.1rem;
+			font-weight: 600;
+			cursor: pointer;
+			margin-bottom: 1.5rem;
+			margin-left: auto;
+			margin-right: 0;
+			padding: 0.2em 0.6em;
+			border-radius: 0.7em;
+			transition: background 0.18s;
+}
+.article-panel__close:hover, .article-panel__close:focus {
+	background: #f2f2f2;
+	outline: none;
+}
+.article-panel__content {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: flex-start;
+		gap: 1.2rem;
+		overflow-y: auto;
+		width: 100%;
+		box-sizing: border-box;
+}
+.article-panel__img {
+			max-width: 220px;
+			width: 100%;
+			height: auto;
+			margin-bottom: 1.2rem;
+			border-radius: 1.2rem;
+			box-shadow: 0 2px 16px rgba(0,0,0,0.07);
+			display: block;
+			object-fit: contain;
+			background: #fafafa;
+}
+.article-panel__title {
+		font-size: 2rem;
+		font-weight: 700;
+		margin: 0 0 1.2rem 0;
+		color: #111;
+		text-align: center;
+		margin-top: 0.5rem;
+}
+.article-panel__desc {
+		font-size: 1.08rem;
+		color: #222;
+		line-height: 1.6;
+		text-align: center;
+		max-width: 420px;
+		margin-top: 0.5rem;
+}
+@media (max-width: 700px) {
+	.article-panel {
+		max-width: 98vw;
+		width: 98vw;
+		border-radius: 0.7rem;
+		padding: 1.2rem 0.5rem 1.2rem 0.5rem;
+	}
+	.article-panel__img {
+		max-width: 90vw;
+	}
+}
 html {
 	scroll-behavior: smooth;
 }

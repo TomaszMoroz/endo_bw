@@ -451,22 +451,26 @@ body {
 }
 
 .gallery__img {
-		width: auto;
-		height: 360px;
-		display: block;
-		object-fit: contain;
-		margin-left: auto;
-		margin-right: auto;
-		background: #111;
-		border-radius: 0;
-	}
+					max-width: 95%;
+					max-height: 65vh;
+					height: auto;
+					display: block;
+					margin: 0 auto;
+					border-radius: 1.2rem;
+					box-shadow: 0 4px 32px 0 rgba(0,0,0,0.10);
+					background: #fff;
+					object-fit: contain;
+					opacity: 1;
+					transform: translateX(0);
+					transition: opacity 0.3s, transform 0.7s cubic-bezier(.4,0,.2,1);
+		}
 
 	@media (max-width: 900px) {
-		.gallery__img {
-			max-width: 75%;
-			height: 200px;
-			max-height: 200px;
-		}
+			.gallery__img {
+				max-width: 95%;
+				max-height: 35vh;
+				height: auto;
+			}
 	}
 
 .hero__container--vertical {

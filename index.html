@@ -80,5 +80,31 @@
       </div>
     </section>
 
+    <!-- Overlay for modal panels -->
+    <div class="modal-overlay" id="modalOverlay" tabindex="-1" aria-hidden="true"></div>
+
+    <!-- Cennik side panel -->
+    <aside class="cennik-panel" id="cennikPanel" aria-modal="true" tabindex="-1" role="dialog" aria-labelledby="cennikTitle" aria-describedby="cennikDesc">
+      <button class="cennik-panel__close" id="cennikClose" aria-label="Powrót do strony głównej">&larr; Powrót</button>
+      <h2 class="cennik-panel__title" id="cennikTitle">Cennik</h2>
+      <div class="cennik-panel__content" id="cennikDesc">
+        <table class="cennik-table">
+          <tbody>
+            <tr><td>Gastroskopia</td><td>450 zł</td></tr>
+            <tr><td>Gastroskopia z konsultacją</td><td>650 zł</td></tr>
+            <tr><td>Kolonoskopia</td><td>650 zł</td></tr>
+            <tr><td>Kolonoskopia z konsultacją</td><td>850 zł</td></tr>
+            <tr><td>Konsultacja</td><td>300 zł</td></tr>
+            <tr><td>Znieczulenie do badania</td><td>300 zł</td></tr>
+            <tr><td>Badanie histopatologiczne (1 wycinek)</td><td>200 zł</td></tr>
+            <tr><td>Polipektomia</td><td>300 zł</td></tr>
+            <tr><td>Polipektomia (kolejne wycinki)</td><td>200 zł</td></tr>
+          </tbody>
+        </table>
+        <p class="cennik-panel__info">Cennik ma charakter informacyjny i nie stanowi oferty handlowej w rozumieniu art.46 par.1 Kodeksu Cywilnego. Zastrzegamy sobie prawo zmiany podanych cen. W cenę gastroskopii wliczony jest test na Helicobacter pylori.</p>
+      </div>
+    </aside>
+
+    <script src="/src/cennik-panel.js"></script>
   </body>
 </html>

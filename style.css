@@ -189,15 +189,29 @@ footer.site-footer {
 	gap: 1.2rem;
 	margin-top: 0.7rem;
 }
+/* --- SOCIAL MEDIA IKONY --- */
 .site-footer__socials a {
 	color: #fff;
-	font-size: 1.5rem;
-	transition: color 0.18s;
+	font-size: 4rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	filter: grayscale(1);
+	transition: color 0.18s, filter 0.18s, transform 0.18s;
+}
+.site-footer__socials a svg,
+.site-footer__socials a img {
+	width: 4rem !important;
+	height: 4rem !important;
+	display: block;
+	object-fit: contain;
 }
 .site-footer__socials a:hover,
 .site-footer__socials a:focus {
 	color: #bbb;
+	filter: grayscale(0.2) brightness(1.2);
 	outline: none;
+	transform: scale(1.08);
 }
 @media (max-width: 900px) {
 	.site-footer__row {

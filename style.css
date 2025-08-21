@@ -1,4 +1,31 @@
 @media (max-width: 700px) {
+	.services__tiles {
+		display: flex !important;
+		flex-direction: column !important;
+		align-items: center !important;
+		justify-content: center !important;
+		width: 100vw !important;
+		margin-left: 0 !important;
+		margin-right: 0 !important;
+		padding: 0 !important;
+		box-sizing: border-box !important;
+		overflow-x: hidden !important;
+	}
+	.service-tile {
+		width: 80vw !important;
+		max-width: 300px !important;
+		margin: 0.7rem auto !important;
+		background-color: #ededed !important;
+		box-sizing: border-box !important;
+	}
+
+	.services__desc {
+		max-width: 300px !important;
+		margin-left: auto !important;
+		margin-right: auto !important;
+	}
+}
+@media (max-width: 700px) {
 							.article-panel__close--badges {
 								position: absolute;
 								top: 0.7rem;

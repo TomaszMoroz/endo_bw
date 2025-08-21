@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', function () {
       badges.forEach((badge, i) => {
         setTimeout(() => badge.classList.add('badge-visible'), i * 250);
       });
-    }, 2000);
+    }, 1500);
   }
 });
 

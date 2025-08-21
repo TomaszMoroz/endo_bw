@@ -1,3 +1,31 @@
+// === BADGES MODAL LOGIC (mobile) ===
+document.addEventListener('DOMContentLoaded', function () {
+  var btn = document.getElementById('badgesTrophyBtn');
+  var modal = document.getElementById('badgesModal');
+  var overlay = document.getElementById('badgesModalOverlay');
+  var back = document.getElementById('badgesModalBack');
+  if (btn && modal && overlay && back) {
+    btn.addEventListener('click', function () {
+      modal.classList.add('is-active');
+      overlay.classList.add('is-active');
+    });
+    back.addEventListener('click', function () {
+      modal.classList.remove('is-active');
+      overlay.classList.remove('is-active');
+    });
+    overlay.addEventListener('click', function () {
+      modal.classList.remove('is-active');
+      overlay.classList.remove('is-active');
+    });
+    // ESC key closes modal
+    document.addEventListener('keydown', function (e) {
+      if ((modal.classList.contains('is-active') || overlay.classList.contains('is-active')) && (e.key === 'Escape' || e.key === 'Esc')) {
+        modal.classList.remove('is-active');
+        overlay.classList.remove('is-active');
+      }
+    });
+  }
+});
 // Badge fade-in after 2s on desktop
 document.addEventListener('DOMContentLoaded', function () {
   if (window.innerWidth > 700) {

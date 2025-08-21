@@ -1,3 +1,74 @@
+/* === RODO MODAL === */
+.rodo-modal {
+	position: fixed;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%) scale(0.98);
+	background: #fff;
+	color: #222;
+	border-radius: 1.2em;
+	box-shadow: 0 8px 48px 0 rgba(20,83,45,0.18);
+	z-index: 2000;
+	min-width: 320px;
+	max-width: 95vw;
+	width: 540px;
+	padding: 2.2em 2.2em 1.5em 2.2em;
+	opacity: 0;
+	pointer-events: none;
+	transition: opacity 0.3s, transform 0.3s;
+	display: none;
+}
+.rodo-modal.is-active {
+	opacity: 1;
+	pointer-events: auto;
+	transform: translate(-50%, -50%) scale(1);
+	display: block;
+}
+.rodo-modal__close {
+	position: absolute;
+	top: 1.1em;
+	right: 1.1em;
+	background: none;
+	border: none;
+	font-size: 2.1rem;
+	color: #222;
+	cursor: pointer;
+	padding: 0.1em 0.5em;
+	border-radius: 0.5em;
+	transition: background 0.18s;
+}
+.rodo-modal__close:hover,
+.rodo-modal__close:focus {
+	background: #f2f2f2;
+}
+.rodo-modal__title {
+	font-size: 1.25rem;
+	font-weight: 700;
+	margin-bottom: 1.1em;
+	color: #14532d;
+}
+.rodo-modal__content {
+	font-size: 1.05rem;
+	line-height: 1.7;
+	color: #222;
+	max-height: 60vh;
+	overflow-y: auto;
+}
+.site-footer__rodo-link {
+	display: inline-block;
+	margin-top: 0.7em;
+	color: #fff;
+	font-weight: 600;
+	text-decoration: none;
+	font-size: 1.01em;
+	cursor: pointer;
+	transition: color 0.18s;
+}
+.site-footer__rodo-link:hover,
+.site-footer__rodo-link:focus {
+	color: #fff;
+	text-decoration: none;
+}
 @media (max-width: 900px) {
 	.site-footer__row {
 		flex-direction: column;
@@ -965,6 +1036,7 @@ html {
 	opacity: 0;
 	pointer-events: none;
 	transition: opacity 0.3s cubic-bezier(.4,0,.2,1);
+	z-index: 1301;
 }
 .modal-overlay.is-active {
 	opacity: 1;
@@ -981,7 +1053,7 @@ html {
 	max-width: 480px;
 	background: #fff;
 	box-shadow: -8px 0 32px rgba(0,0,0,0.18);
-	z-index: 1200;
+	z-index: 1400;
 	transform: translateX(100%);
 	transition: transform 0.45s cubic-bezier(.4,0,.2,1);
 	display: flex;

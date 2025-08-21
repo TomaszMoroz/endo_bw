@@ -2,31 +2,40 @@
 		.badges__wrapper {
 			display: none !important;
 		}
-			.badges {
-				display: flex;
-				flex-direction: row;
-				justify-content: center;
-			}
-				.badges-trophy-btn {
-					display: flex;
-					align-items: center;
-					justify-content: center;
-					gap: 0.7em;
-					margin: 0 auto;
-					padding: 1.1rem 2.2rem;
-					font-size: 1.13rem;
-					font-weight: 600;
-					background: #fff;
-					border: 1.5px solid #222;
-					border-radius: 1.2rem;
-					color: #222;
-					cursor: pointer;
-					box-shadow: 0 2px 12px 0 rgba(0,0,0,0.07);
-					transition: background 0.18s, color 0.18s, box-shadow 0.18s;
-					width: 92vw;
-					max-width: 340px;
-					letter-spacing: 0.01em;
-				}
+		.badges {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			width: 100vw;
+			position: static;
+			left: unset;
+			right: unset;
+			bottom: unset;
+			margin: 2.5rem 0 0 0;
+			gap: 0.7rem;
+			z-index: 2;
+		}
+		.badges-trophy-btn {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			gap: 0.7em;
+			margin-inline: auto !important;
+			padding: 1.1rem 2.2rem;
+			font-size: 1.13rem;
+			font-weight: 600;
+			background: #fff;
+			border: 1.5px solid #222;
+			border-radius: 1.2rem;
+			color: #222;
+			cursor: pointer;
+			box-shadow: 0 2px 12px 0 rgba(0,0,0,0.07);
+			transition: background 0.18s, color 0.18s, box-shadow 0.18s;
+			width: 70vw;
+			max-width: 340px;
+			letter-spacing: 0.01em;
+		}
 	.badges-trophy-btn:active,
 	.badges-trophy-btn:focus {
 		background: #f2f2f2;
@@ -219,18 +228,14 @@
 		max-width: 180px;
 	}
 		.badges {
-			display: grid;
-			grid-template-columns: 1fr 1fr;
-			gap: 0.7rem;
-			margin-top: 1.2rem;
-			position: static;
+			display: block !important;
 			width: 100vw;
-			left: 0;
-			right: 0;
-			bottom: 0;
+			margin: 2.5rem 0 0 0;
+			position: static;
+			left: unset;
+			right: unset;
+			bottom: unset;
 			z-index: 2;
-			justify-items: center;
-			align-items: end;
 		}
 		.badges__item {
 			padding: 0.4rem 0.5rem;
@@ -255,15 +260,7 @@
 			animation: none !important;
 			transform: none !important;
 		}
-													.badges {
-														position: static !important;
-														display: block !important;
-														width: 100% !important;
-														left: unset !important;
-														right: unset !important;
-														bottom: unset !important;
-														margin: 2.5rem 0 0 0;
-													}
+			/* Remove duplicate/conflicting .badges rules below, keep only the main one above */
 												.badges__wrapper {
 														display: grid;
 														grid-template-columns: repeat(2, 1fr);
@@ -307,16 +304,7 @@
 												animation: none !important;
 												transform: none !important;
 											}
-						.badges {
-							position: static !important;
-							display: grid !important;
-							width: 100vw !important;
-							margin: 2.5rem 0 0 0 !important;
-							justify-items: center;
-							left: unset !important;
-							right: unset !important;
-							bottom: unset !important;
-						}
+		/* Removed duplicate .badges grid rule for mobile */
 			.badges__item {
 				text-align: center;
 			}

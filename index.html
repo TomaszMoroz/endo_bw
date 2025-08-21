@@ -58,8 +58,26 @@
     </div>
   </div>
   <button class="badges-trophy-btn" id="badgesTrophyBtn" type="button" aria-label="Wyróżnienia">
-    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="vertical-align:middle;margin-right:0.7em;"><path d="M7 21h10M12 17v4M17 5V3a1 1 0 0 0-1-1H8a1 1 0 0 0-1 1v2M21 5h-4v2a5 5 0 0 1-10 0V5H3v2a7 7 0 0 0 14 0V5h4v2a7 7 0 0 1-14 0V5" stroke="#222" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="vertical-align:middle;margin-right:0.7em;"><path d="M7 21h10M12 17v4M17 5V3a1 1 0 0 0-1-1H8a1 1 0 0 0-1 1v2M21 5h-4v2a5 5 0 0 1-10 0V5H3v2a7 7 0 0 0 14 0V5h4v2a7 7 0 0 1-14 0V5" stroke="#14532d" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
     Wyróżnienia
+    <style>
+      .badges-trophy-btn {
+        background: #fff !important;
+        color: #14532d !important;
+        border: 2px solid #14532d !important;
+        border-radius: 2em;
+        padding: 0.7em 1.7em;
+        font-weight: 600;
+        font-size: 1.1em;
+        box-shadow: 0 2px 8px 0 rgba(20,83,45,0.08);
+        transition: background 0.2s, color 0.2s, border-color 0.2s;
+      }
+      .badges-trophy-btn:hover, .badges-trophy-btn:focus {
+        background: #14532d !important;
+        color: #fff !important;
+        border-color: #166534 !important;
+      }
+    </style>
   </button>
   <!-- Modal with badges, hidden by default -->
   <div class="modal-overlay modal-overlay--badges" id="badgesModalOverlay"></div>

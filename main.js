@@ -37,7 +37,9 @@ document.addEventListener('DOMContentLoaded', function () {
     }, 2000);
   }
 });
+
 import './style.css'
+import { setupContactFormEmail } from './src/contact-email.js';
 
 // ===== MEDICAL CENTER WEBSITE FUNCTIONALITY =====
 
@@ -133,22 +135,8 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     }
   });
-  // Prosta walidacja formularza kontaktowego
-  const form = document.querySelector('.contact__form');
-  if (form) {
-    form.addEventListener('submit', e => {
-      e.preventDefault();
-      const name = form.elements['name'].value.trim();
-      const email = form.elements['email'].value.trim();
-      const message = form.elements['message'].value.trim();
-      if (!name || !email || !message) {
-        alert('Uzupełnij wszystkie pola.');
-        return;
-      }
-      alert('Dziękujemy za kontakt! Skontaktujemy się wkrótce.');
-      form.reset();
-    });
-  }
+  // Obsługa wysyłki email przez EmailJS
+  setupContactFormEmail();
 
   // Cennik - pełnoekranowy panel z animacją
   const pricingSection = document.getElementById('cennik');

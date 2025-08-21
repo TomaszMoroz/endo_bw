@@ -1,3 +1,8 @@
+import { setupContactFormEmail } from './contact-email.js';
+// Inicjalizacja obsługi formularza kontaktowego (EmailJS, walidacja, popupy)
+document.addEventListener('DOMContentLoaded', () => {
+  setupContactFormEmail();
+});
 // --- THEME TOGGLE ---
 document.addEventListener('DOMContentLoaded', () => {
   const themeToggle = document.querySelector('.theme-toggle');

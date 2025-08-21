@@ -1,3 +1,14 @@
+// Badge fade-in after 2s on desktop
+document.addEventListener('DOMContentLoaded', function () {
+  if (window.innerWidth > 700) {
+    const badges = document.querySelectorAll('.badges__item');
+    setTimeout(() => {
+      badges.forEach((badge, i) => {
+        setTimeout(() => badge.classList.add('badge-visible'), i * 250);
+      });
+    }, 2000);
+  }
+});
 import './style.css'
 
 // ===== MEDICAL CENTER WEBSITE FUNCTIONALITY =====

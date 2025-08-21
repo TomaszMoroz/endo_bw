@@ -942,7 +942,7 @@ footer.site-footer {
 			overflow-y: auto;
 			background: #fff;
 			box-shadow: 0 8px 32px rgba(0,0,0,0.18);
-			z-index: 1300;
+			z-index: 1401;
 			transition: opacity 0.35s cubic-bezier(.4,0,.2,1), transform 0.35s cubic-bezier(.4,0,.2,1);
 			display: none;
 			flex-direction: column;
@@ -955,7 +955,7 @@ footer.site-footer {
 			opacity: 1;
 			transform: translate(-50%, -50%) scale(1);
 			display: flex !important;
-			z-index: 1300;
+			z-index: 1401;
 }
 .article-panel__close {
 			align-self: flex-end;

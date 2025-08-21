@@ -1,4 +1,42 @@
 @media (max-width: 700px) {
+	.badges__wrapper {
+		display: none !important;
+	}
+	.badges-trophy-btn {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 0.7em;
+		margin: 0 auto;
+		margin-top: 1.2rem;
+		padding: 1.1rem 2.2rem;
+		font-size: 1.13rem;
+		font-weight: 600;
+		background: #fff;
+		border: 1.5px solid #222;
+		border-radius: 1.2rem;
+		color: #222;
+		cursor: pointer;
+		box-shadow: 0 2px 12px 0 rgba(0,0,0,0.07);
+		transition: background 0.18s, color 0.18s, box-shadow 0.18s;
+		width: 92vw;
+		max-width: 340px;
+		letter-spacing: 0.01em;
+	}
+	.badges-trophy-btn:active,
+	.badges-trophy-btn:focus {
+		background: #f2f2f2;
+		color: #111;
+		outline: none;
+		box-shadow: 0 4px 24px 0 rgba(0,0,0,0.13);
+	}
+}
+@media (min-width: 701px) {
+	.badges-trophy-btn {
+		display: none !important;
+	}
+}
+@media (max-width: 700px) {
 	.hero__container--vertical {
 		display: flex;
 		flex-direction: column-reverse;

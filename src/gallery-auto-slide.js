@@ -42,7 +42,7 @@ ready(() => {
       img.alt = alts[idx];
       img.style.transition = 'opacity 0.3s, transform 0.7s cubic-bezier(.4,0,.2,1)';
       img.style.opacity = 1;
-      img.style.transform = 'translateX(0)';
+      img.style.transform = 'translateX(15px)';
     }, 80);
   }
 

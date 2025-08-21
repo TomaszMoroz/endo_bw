@@ -1,3 +1,211 @@
+/* === BUTTONY KONTAKTOWE === */
+.contact-section__btn, .site-footer__btn {
+	display: inline-block;
+	background: #14532d;
+	color: #fff;
+	font-size: 1.08rem;
+	font-weight: 600;
+	border: none;
+	border-radius: 1.2rem;
+	padding: 0.7rem 2.2rem;
+	margin: 0.3rem 0 0.7rem 0;
+	text-align: center;
+	text-decoration: none;
+	cursor: pointer;
+	transition: background 0.18s, color 0.18s, box-shadow 0.18s;
+	box-shadow: 0 2px 12px 0 rgba(20,83,45,0.07);
+	letter-spacing: 0.01em;
+}
+.contact-section__btn:hover, .contact-section__btn:focus,
+.site-footer__btn:hover, .site-footer__btn:focus {
+	background: #166534;
+	color: #fff;
+	outline: none;
+}
+@media (max-width: 700px) {
+	.contact-section__btn, .site-footer__btn {
+		font-size: 0.98rem;
+		padding: 0.6rem 1.2rem;
+	}
+}
+/* === CONTACT SECTION === */
+.contact-section {
+	width: 100vw;
+	max-width: 1200px;
+	margin: 0 auto 3.5rem auto;
+	padding: 2.5rem 1.5rem 2.5rem 1.5rem;
+	display: flex;
+	flex-direction: row;
+	gap: 3rem;
+	background: #fafbfc;
+	border-radius: 1.2rem;
+	box-sizing: border-box;
+	box-shadow: 0 2px 16px 0 rgba(0,0,0,0.04);
+}
+.contact-section__hours, .contact-section__form {
+	flex: 1 1 320px;
+	min-width: 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	background: none;
+}
+.contact-section__hours {
+	padding-right: 2rem;
+}
+.contact-section__form {
+	padding-left: 2rem;
+}
+.contact-section__title {
+	font-size: 1.45rem;
+	font-weight: 700;
+	margin-bottom: 1.2rem;
+	color: #111;
+	letter-spacing: -0.01em;
+}
+.contact-section__hours-list {
+	list-style: none;
+	padding: 0;
+	margin: 0 0 1.5rem 0;
+	color: #222;
+	font-size: 1.08rem;
+	line-height: 1.7;
+}
+.contact-section__form form {
+	display: flex;
+	flex-direction: column;
+	gap: 1.1rem;
+}
+.contact-section__form input,
+.contact-section__form textarea {
+	font-family: inherit;
+	font-size: 1.08rem;
+	padding: 0.7rem 1rem;
+	border: 1px solid #ddd;
+	border-radius: 0.7rem;
+	background: #fff;
+	color: #222;
+	resize: vertical;
+	transition: border 0.18s;
+}
+.contact-section__form input:focus,
+.contact-section__form textarea:focus {
+	border: 1.5px solid #111;
+	outline: none;
+}
+.contact-section__form button {
+	font-size: 1.13rem;
+	font-weight: 600;
+	background: #111;
+	color: #fff;
+	border: none;
+	border-radius: 1.2rem;
+	padding: 0.7rem 2.2rem;
+	cursor: pointer;
+	transition: background 0.18s, color 0.18s;
+	box-shadow: 0 2px 12px 0 rgba(0,0,0,0.07);
+}
+.contact-section__form button:hover,
+.contact-section__form button:focus {
+	background: #333;
+	outline: none;
+}
+@media (max-width: 900px) {
+	.contact-section {
+		flex-direction: column;
+		gap: 2rem;
+		padding: 2rem 0.5rem 2rem 0.5rem;
+	}
+	.contact-section__hours, .contact-section__form {
+		padding: 0;
+	}
+}
+@media (max-width: 700px) {
+	.contact-section {
+		border-radius: 0.7rem;
+		padding: 1.2rem 0.5rem 1.2rem 0.5rem;
+		gap: 1.2rem;
+	}
+	.contact-section__title {
+		font-size: 1.13rem;
+		margin-bottom: 0.7rem;
+	}
+	.contact-section__form button {
+		font-size: 1rem;
+		padding: 0.6rem 1.2rem;
+	}
+}
+
+/* === FOOTER === */
+footer.site-footer {
+	width: 100vw;
+	background: #111;
+	color: #fff;
+	padding: 2.5rem 1.5rem 1.5rem 1.5rem;
+	margin: 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	font-size: 1.04rem;
+	letter-spacing: 0.01em;
+	box-sizing: border-box;
+}
+.site-footer__row {
+	width: 100%;
+	max-width: 1200px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: flex-start;
+	gap: 2.5rem;
+	margin-bottom: 1.5rem;
+}
+.site-footer__col {
+	flex: 1 1 220px;
+	min-width: 0;
+	display: flex;
+	flex-direction: column;
+	gap: 0.7rem;
+}
+.site-footer__title {
+	font-size: 1.13rem;
+	font-weight: 700;
+	margin-bottom: 0.5rem;
+	color: #fff;
+}
+.site-footer__link {
+	color: #fff;
+	text-decoration: none;
+	transition: color 0.18s;
+}
+.site-footer__link:hover,
+.site-footer__link:focus {
+	color: #bbb;
+	outline: none;
+}
+.site-footer__socials {
+	display: flex;
+	flex-direction: row;
+	gap: 1.2rem;
+	margin-top: 0.7rem;
+}
+.site-footer__socials a {
+	color: #fff;
+	font-size: 1.5rem;
+	transition: color 0.18s;
+}
+.site-footer__socials a:hover,
+.site-footer__socials a:focus {
+	color: #bbb;
+	outline: none;
+}
+@media (max-width: 900px) {
+	.site-footer__row {
+		flex-direction: column;
+		gap: 1.5rem;
+		align-items: flex-start;
+	}
+}
 @media (max-width: 700px) {
 	.services__tiles {
 		display: flex !important;

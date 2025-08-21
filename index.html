@@ -14,7 +14,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Centrum Medyczne Endonova</title>
   <meta name="description" content="Centrum Medyczne Endonova – Gastroskopia, kolonoskopia, konsultacje. Gdynia." />
-  <!-- <link rel="icon" type="image/svg+xml" href="/medical-icon.svg" /> -->
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
   <link rel="stylesheet" href="/style.css" />
   <script type="module" src="/src/nav.js"></script>
   <script src="/src/gallery-auto-slide.js"></script>
@@ -274,6 +274,7 @@
           <div>Ul. Legionów 116/ A41<br>Gdynia</div>
           <div style="font-size:1.08rem;letter-spacing:0.04em;font-weight:600;margin-top:1.2rem;">78 1050 1764 1000 0090 8212 0776</div>
           <div style="font-size:0.98rem;color:#bbb;">ING Bank Śląski</div>
+          <a href="#" class="site-footer__rodo-link" id="rodoLink">RODO</a>
         </div>
         <div class="site-footer__col site-footer__col--social">
           <div class="site-footer__title">Social Media i linki</div>
@@ -492,6 +493,58 @@
     </aside>
     <script src="/src/badges-appear.js"></script>
   </main>
+  <!-- RODO MODAL -->
+  <div class="modal-overlay" id="rodoModalOverlay" tabindex="-1" aria-hidden="true" style="display:none"></div>
+  <div class="rodo-modal" id="rodoModal" role="dialog" aria-modal="true" aria-labelledby="rodoModalTitle" style="display:none">
+    <button class="rodo-modal__close" id="rodoModalClose" aria-label="Zamknij">&times;</button>
+    <h2 class="rodo-modal__title" id="rodoModalTitle">Informacje dotyczące przetwarzania danych osobowych</h2>
+    <div class="rodo-modal__content">
+      <ol style="padding-left:1.2em;">
+        <li>Administratorem danych osobowych jest CENTRUM MEDYCZNE ENDONOVA SP. Z O.O, Ul. Legionów 116/A41, 81-472 Gdynia, NIP: 586 238 98 08 REGON: 524616250, tel: 517 787 788, adres mailowy: recepcja@endonova.pl, przedstawicielem Administratora jest: Piotr Jarzynkowski.</li>
+        <li>Inspektor Danych Osobowych: Justyna Mikołajczuk, adres mailowy: recepcja@endonova.pl.</li>
+        <li>Przetwarzanie Państwa danych osobowych jest niezbędne do celów profilaktyki zdrowotnej, medycyny pracy, diagnozy medycznej, zapewnienia opieki zdrowotnej, leczenia, usług opieki zdrowotnej (aktualnie obowiązujące krajowe przepisy z zakresu Ochrony Zdrowia, art 9 ust.2 RODO, art 3, ust. 1 i 2 ustawy o działalności leczniczej, art.24 ustawy o Prawach Pacjenta oraz Rzecznika Praw Pacjenta).</li>
+        <li>Odbiorcami Pani/Pana danych osobowych są m.in. podmioty uprawnione do uzyskania dostępu do dokumentacji medycznej na zasadach przewidzianych w art. 24 ustawy o Prawach Pacjenta oraz Rzecznika Praw Pacjenta oraz inne podmioty (z obowiązkiem zachowania ich w tajemnicy), na podstawie właściwych, aktualnie obowiązujących przepisów prawa oraz osoby i podmioty przetwarzające dane w ramach z arządzania systemem informatycznym, obsługi podatkowo-księgowej oraz doradztwa prawnego.</li>
+        <li>Państwa dane osobowe zaliczają się do szczególnej kategorii danych osobowych, ponieważ obejmują swoim zakresem dane dotyczące zdrowia (art. 9, ust.1 RODO).</li>
+        <li>Podanie przez Państwa danych osobowych jest obligatoryjne ponieważ wiąże się z udzieleniem świadczeń zdrowotnych. Wynika ona z przepisów prawa, a w szczególności przepisów o Prawach Pacjenta dotyczących prowadzenia dokumentacji medycznej. Odmowa podania danych osobowych będzie skutkowała niemożliwością wykonania świadczeń zdrowotnych, chyba, że przepisy stanowią inaczej.</li>
+        <li>Pani/Pana dane osobowe przetwarzane w dokumentacji medycznej będą przechowywane przez okres 20 lat, licząc od końca roku kalendarzowego, w którym dokonano ostatniego wpisu, z zastrzeżeniem wyjątków wskazanych w art.29 ustawy o Prawach Pacjenta lub innych przepisach prawa.</li>
+        <li>Posiada Pani/Pan prawo do dostępu do treści swoich danych osobowych oraz prawo do ich sprostowania.</li>
+        <li>Przewidziane w RODO prawo do usunięcia danych osobowych, ograniczenia przetwarzania danych oraz do wniesienia sprzeciwu wobec takiego przetwarzania jest ograniczone z uwagi na treść art. 29 ustawy o Prawach Pacjenta oraz Rzecznika Praw Pacjenta, który nakazuje placówce medycznej przechowywanie danych zgromadzonych w dokumentacji medycznej przez określony czas.</li>
+        <li>Przysługuje Pani/Panu prawo do wniesienia skargi do Prezesa Urzędu Ochrony Danych Osobowych z siedzibą w Warszawie, jeśli Pani/Pana zdaniem, przetwarzanie danych osobowych narusza obowiązujące przepisy prawa.</li>
+      </ol>
+    </div>
+  </div>
+  <script>
+    const rodoLink = document.getElementById('rodoLink');
+    const rodoModal = document.getElementById('rodoModal');
+    const rodoModalOverlay = document.getElementById('rodoModalOverlay');
+    const rodoModalClose = document.getElementById('rodoModalClose');
+    if (rodoLink && rodoModal && rodoModalOverlay && rodoModalClose) {
+      rodoLink.addEventListener('click', function(e) {
+        e.preventDefault();
+        rodoModal.style.display = 'block';
+        rodoModalOverlay.style.display = 'block';
+        setTimeout(() => {
+          rodoModal.classList.add('is-active');
+          rodoModalOverlay.classList.add('is-active');
+        }, 10);
+      });
+      function closeRodoModal() {
+        rodoModal.classList.remove('is-active');
+        rodoModalOverlay.classList.remove('is-active');
+        setTimeout(() => {
+          rodoModal.style.display = 'none';
+          rodoModalOverlay.style.display = 'none';
+        }, 300);
+      }
+      rodoModalClose.addEventListener('click', closeRodoModal);
+      rodoModalOverlay.addEventListener('click', closeRodoModal);
+      document.addEventListener('keydown', function(e) {
+        if ((rodoModal.classList.contains('is-active') || rodoModalOverlay.classList.contains('is-active')) && (e.key === 'Escape' || e.key === 'Esc')) {
+          closeRodoModal();
+        }
+      });
+    }
+  </script>
   <script type="module" src="/src/main.js"></script>
 </body>
 

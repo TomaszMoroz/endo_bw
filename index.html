@@ -10,6 +10,8 @@
   <script type="module" src="/src/nav.js"></script>
   <script src="/src/gallery-auto-slide.js"></script>
   <script src="/src/gallery-lightbox.js"></script>
+  <!-- script moved to end of body -->
+
   </head>
 
   <body>
@@ -35,14 +37,26 @@
     </nav>
 
         <section class="hero">
-	  <div class="hero__container hero__container--vertical">
-		<p class="hero__desc hero__desc--lead">
-			Centrum Medyczne Endonova to nowoczesna placówka specjalizująca się w diagnostyce i leczeniu schorzeń przewodu pokarmowego.
-		</p>
-		<p class="hero__desc hero__desc--sub">
-			Oferujemy gastroskopię, kolonoskopię oraz konsultacje gastroenterologiczne na najwyższym poziomie – w komfortowych warunkach, z troską o bezpieczeństwo i spokój pacjenta.
-		</p>
-	  </div>
+    <div class="hero__container hero__container--vertical">
+      <p class="hero__desc hero__desc--lead">
+        Centrum Medyczne Endonova to nowoczesna placówka specjalizująca się w diagnostyce i leczeniu schorzeń przewodu pokarmowego.
+      </p>
+      <p class="hero__desc hero__desc--sub">
+        Oferujemy gastroskopię, kolonoskopię oraz konsultacje gastroenterologiczne na najwyższym poziomie – w komfortowych warunkach, z troską o bezpieczeństwo i spokój pacjenta.
+      </p>
+  <div class="badges" id="badges">
+  <div class="badges__wrapper">
+          <div class="badges__item"><img src="/best2024.svg" alt="Najlepsza placówka 2024" /></div>
+          <div class="badges__item"><img src="/best2023.svg" alt="Najlepsza placówka 2023" /></div>
+          <div class="badges__item"><img src="/best2022.svg" alt="Najlepsza placówka 2022" /></div>
+          <div class="badges__item">
+            <a href="https://www.orlymedycyny.pl/profile-798438-centrum-medyczne-endonova" target="_blank" rel="noopener">
+              <img src="https://www.orlymedycyny.pl/images/medals/798438/laureat300_black_pl.png" style="width:300px; height:75px; border:0;" alt="Centrum Medyczne Endonova - Gdynia" title="Centrum Medyczne Endonova - Gdynia">
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
 
     </section>
 
@@ -68,13 +82,13 @@
         <div class="service-tile service-tile--gastroskopia" data-article-open="gastroskopia">
           <h3>Gastroskopia</h3>
           <p>Nowoczesne badanie endoskopowe górnego odcinka przewodu pokarmowego. Pozwala na szybką i precyzyjną diagnostykę żołądka, przełyku i dwunastnicy.</p>
-          <span class="service-tile__caption" aria-hidden="true">przeczytaj więcej</span>
+          <span class="service-tile__caption" aria-hidden="true">więcej</span>
           <span class="service-tile__arrow" aria-hidden="true">→</span>
         </div>
         <div class="service-tile service-tile--kolonoskopia" data-article-open="kolonoskopia">
           <h3>Kolonoskopia</h3>
           <p>Badanie dolnego odcinka przewodu pokarmowego. Umożliwia wykrycie zmian w jelicie grubym, w tym polipów i stanów zapalnych.</p>
-          <span class="service-tile__caption" aria-hidden="true">przeczytaj więcej</span>
+            <span class="service-tile__caption" aria-hidden="true">więcej</span>
           <span class="service-tile__arrow" aria-hidden="true">→</span>
         </div>
         <div class="service-tile service-tile--konsultacje">
@@ -180,5 +194,6 @@
         </div>
       </div>
     </aside>
+    <script src="/src/badges-appear.js"></script>
   </body>
 </html>

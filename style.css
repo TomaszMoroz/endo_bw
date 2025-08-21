@@ -1,3 +1,22 @@
+/* --- HERO IMAGE --- */
+.hero__img {
+	display: block;
+	max-width: 320px;
+	width: 100%;
+	margin: 2.2rem auto 0 auto;
+	object-fit: contain;
+	border-radius: 1.2rem;
+	box-shadow: 0 2px 16px rgba(0,0,0,0.07);
+	background: #fafafa;
+}
+@media (max-width: 700px) {
+	.hero__img {
+		float: none;
+		display: block;
+		margin: 0 auto 1.2rem auto;
+		max-width: 98vw;
+	}
+}
 .badges {
 			display: flex;
 			flex-wrap: wrap;
@@ -7,7 +26,7 @@
 			position: absolute;
 			left: 0;
 			right: 0;
-						bottom: -5rem;
+						bottom: -170px;
 			z-index: 2;
 }
 .badges__item {
@@ -63,22 +82,195 @@
 	display: inline-block;
 }
 @media (max-width: 700px) {
+	.badges-modal-btn {
+		display: block;
+	}
+	.badges-modal {
+		display: none;
+	}
+	.badges-modal.is-active {
+		display: flex;
+	}
+	.badges-modal-btn {
+		display: block;
+		margin: 1.5rem auto 0 auto;
+		padding: 0.7rem 1.6rem;
+		font-size: 1.1rem;
+		font-weight: 600;
+		background: #fff;
+		border: 1.5px solid #222;
+		border-radius: 1.2rem;
+		color: #222;
+		cursor: pointer;
+		box-shadow: 0 2px 12px 0 rgba(0,0,0,0.07);
+		transition: background 0.18s, color 0.18s;
+	}
+	.badges-modal-btn:active,
+	.badges-modal-btn:focus {
+		background: #f2f2f2;
+		color: #111;
+		outline: none;
+	}
+	.badges-modal {
+		display: none;
+		position: fixed;
+		inset: 0;
+		background: rgba(0,0,0,0.45);
+		z-index: 9999;
+		align-items: center;
+		justify-content: center;
+	}
+	.badges-modal.is-active {
+		display: flex;
+	}
+	.badges-modal__content {
+		background: #fff;
+		border-radius: 1.2rem;
+		padding: 2.2rem 1.2rem 1.2rem 1.2rem;
+		max-width: 340px;
+		width: 92vw;
+		box-shadow: 0 4px 32px 0 rgba(0,0,0,0.13);
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	.badges-modal__close {
+		position: absolute;
+		top: 0.7rem;
+		right: 1.1rem;
+		background: none;
+		border: none;
+		font-size: 2.1rem;
+		color: #888;
+		cursor: pointer;
+		z-index: 2;
+		padding: 0.1em 0.5em;
+		border-radius: 0.7em;
+		transition: background 0.18s;
+	}
+	.badges-modal__close:focus,
+	.badges-modal__close:hover {
+		background: #f2f2f2;
+		color: #111;
+		outline: none;
+	}
+	.badges-modal__badges {
+		display: flex;
+		flex-direction: column;
+		gap: 1.1rem;
+		align-items: center;
+		margin-top: 0.7rem;
+	}
+	.badges-modal__badges .badges__item {
+		opacity: 1 !important;
+		pointer-events: auto !important;
+		animation: none !important;
+		transform: none !important;
+		width: 100%;
+		max-width: 180px;
+	}
 		.badges {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
 			gap: 0.7rem;
 			margin-top: 1.2rem;
-			flex-wrap: wrap;
-			flex-direction: row;
+			position: static;
+			width: 100vw;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			z-index: 2;
+			justify-items: center;
+			align-items: end;
 		}
+		.badges__item {
+			padding: 0.4rem 0.5rem;
+			min-width: 120px;
+			min-height: 60px;
+			max-width: 150px;
+			max-height: 60px;
+			box-sizing: border-box;
+			margin-bottom: 0.5rem;
+			opacity: 1 !important;
+			pointer-events: auto !important;
+			animation: none !important;
+			transform: none !important;
+		}
+		.badges__item img {
+			max-height: 44px;
+			max-width: 110px;
+		}
+		.badges__item.badge-visible {
+			opacity: 1 !important;
+			pointer-events: auto !important;
+			animation: none !important;
+			transform: none !important;
+		}
+													.badges {
+														position: static !important;
+														display: block !important;
+														width: 100% !important;
+														left: unset !important;
+														right: unset !important;
+														bottom: unset !important;
+														margin: 2.5rem 0 0 0;
+													}
+												.badges__wrapper {
+														display: grid;
+														grid-template-columns: repeat(2, 1fr);
+														gap: 0.7rem;
+														width: 100%;
+														max-width: 340px;
+														margin: 0 auto;
+														justify-items: center;
+														align-items: end;
+												}
+												.badges__item {
+														width: 100%;
+														max-width: 150px;
+														margin-bottom: 0.5rem;
+														text-align: center;
+														box-sizing: border-box;
+														opacity: 1 !important;
+														pointer-events: auto !important;
+														animation: none !important;
+														transform: none !important;
+												}
+											.badges__item {
+												width: auto;
+												min-width: 120px;
+												max-width: 150px;
+												margin-bottom: 0.5rem;
+												text-align: center;
+												box-sizing: border-box;
+												opacity: 1 !important;
+												pointer-events: auto !important;
+												animation: none !important;
+												transform: none !important;
+											}
+											.badges__item img {
+												max-height: 44px;
+												max-width: 110px;
+											}
+											.badges__item.badge-visible {
+												opacity: 1 !important;
+												pointer-events: auto !important;
+												animation: none !important;
+												transform: none !important;
+											}
+						.badges {
+							position: static !important;
+							display: grid !important;
+							width: 100vw !important;
+							margin: 2.5rem 0 0 0 !important;
+							justify-items: center;
+							left: unset !important;
+							right: unset !important;
+							bottom: unset !important;
+						}
 			.badges__item {
-				padding: 0.4rem 0.5rem;
-				min-width: 120px;
-				min-height: 60px;
-				max-width: 150px;
-				max-height: 60px;
-			}
-			.badges__item img {
-				max-height: 44px;
-				max-width: 110px;
+				text-align: center;
 			}
 }
 .hero {

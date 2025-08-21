@@ -1,3 +1,9 @@
+@media (max-width: 700px) {
+	.hero__container--vertical {
+		display: flex;
+		flex-direction: column-reverse;
+	}
+}
 /* --- HERO IMAGE --- */
 .hero__img {
 	display: block;

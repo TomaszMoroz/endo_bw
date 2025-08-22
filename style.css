@@ -484,19 +484,19 @@ footer.site-footer {
 		flex-direction: column !important;
 		align-items: center !important;
 		justify-content: center !important;
-		width: 100vw !important;
-		margin-left: 0 !important;
-		margin-right: 0 !important;
+		width: 100%;
+		margin: 0 auto !important;
 		padding: 0 !important;
 		box-sizing: border-box !important;
 		overflow-x: hidden !important;
 	}
 	.service-tile {
-		width: 80vw !important;
-		max-width: 300px !important;
-		margin: 0.7rem auto !important;
+		width: 90vw !important;
+		max-width: 340px !important;
+		margin: 0.7rem 0 !important;
 		background-color: #ededed !important;
 		box-sizing: border-box !important;
+		align-self: center !important;
 	}
 
 	.services__desc {

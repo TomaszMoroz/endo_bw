@@ -19,11 +19,21 @@
   <script type="module" src="/src/nav.js"></script>
   <script src="/src/gallery-auto-slide.js"></script>
   <script src="/src/gallery-lightbox.js"></script>
-  <!-- script moved to end of body -->
+
 
 </head>
 
 <body>
+  <!-- COOKIE CONSENT BANNER -->
+  <div id="cookieConsent" class="cookie-consent" style="display:none;">
+    <div class="cookie-consent__content">
+      <p>Ta strona używa plików cookies w celach analitycznych i funkcjonalnych. Możesz zaakceptować lub odrzucić cookies. Sterowanie plikami cookies dostępne jest w zakładce <b>RODO</b> w stopce.</p>
+      <div class="cookie-consent__actions">
+        <button id="cookieAccept" class="cookie-consent__btn cookie-consent__btn--accept">Akceptuję</button>
+        <button id="cookieDecline" class="cookie-consent__btn cookie-consent__btn--decline">Odrzuć</button>
+      </div>
+    </div>
+  </div>
   <main>
     <nav class="nav nav--main">
       <div class="nav__overlay" id="navOverlay"></div>
@@ -497,6 +507,11 @@
   <div class="modal-overlay" id="rodoModalOverlay" tabindex="-1" aria-hidden="true" style="display:none"></div>
   <div class="rodo-modal" id="rodoModal" role="dialog" aria-modal="true" aria-labelledby="rodoModalTitle" style="display:none">
     <button class="rodo-modal__close" id="rodoModalClose" aria-label="Zamknij">&times;</button>
+    <div class="rodo-modal__cookie">
+      <label style="display:flex;align-items:center;gap:0.5em;font-weight:500;font-size:1.1em;margin-bottom:1em;">
+        <input type="checkbox" id="rodoCookieToggle" style="width:1.2em;height:1.2em;" /> Wyłącz pliki cookies (analityczne)
+      </label>
+    </div>
     <h2 class="rodo-modal__title" id="rodoModalTitle">Informacje dotyczące przetwarzania danych osobowych</h2>
     <div class="rodo-modal__content">
       <ol style="padding-left:1.2em;">
@@ -546,6 +561,7 @@
     }
   </script>
   <script type="module" src="/src/main.js"></script>
-</body>
+  <script type="module" src="/src/cookie-consent.js"></script>
+  </body>
 
 </html>

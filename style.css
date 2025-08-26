@@ -1,3 +1,120 @@
+/* --- HERO DESC SECTION UNDER VIDEO --- */
+.hero-desc-section {
+	background: #fff;
+	border-radius: 2.2rem;
+	box-shadow: 0 4px 32px 0 rgba(20,83,45,0.10);
+	margin: 2.5rem auto 2.5rem auto;
+	max-width: 700px;
+	padding: 2.8rem 2.2rem 2.2rem 2.2rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	transition: box-shadow 0.3s;
+}
+.hero-desc-section:hover {
+	box-shadow: 0 8px 40px 0 rgba(20,83,45,0.16);
+}
+.hero-desc__container {
+	width: 100%;
+	text-align: center;
+}
+.hero__desc--lead {
+	color: #14532d;
+	font-size: 1.55rem;
+	font-weight: 800;
+	margin-bottom: 1.1rem;
+	letter-spacing: -0.01em;
+	line-height: 1.4;
+}
+.hero__desc--sub {
+	color: #1a237e;
+	font-size: 1.18rem;
+	font-weight: 500;
+	margin-bottom: 0;
+	line-height: 1.6;
+}
+@media (max-width: 700px) {
+	.hero-desc-section {
+		padding: 1.2rem 0.7rem 1.2rem 0.7rem;
+		max-width: 98vw;
+		border-radius: 1.2rem;
+	}
+	.hero__desc--lead {
+		font-size: 1.08rem;
+	}
+	.hero__desc--sub {
+		font-size: 0.98rem;
+	}
+}
+/* --- HERO FLOATING LOGO --- */
+.hero__logo-float {
+	width: 240px;
+	max-width: 60vw;
+	height: auto;
+	display: block;
+	margin: 0 auto;
+	border-radius: 2rem;
+	background: rgba(255,255,255,0.85);
+	box-shadow: 0 4px 32px 0 rgba(0,0,0,0.10);
+	padding: 2.5rem 2.5rem;
+	z-index: 11;
+	pointer-events: auto;
+}
+
+@media (max-width: 768px) {
+	.hero__logo-float {
+		width: 70vw;
+		max-width: 320px;
+		padding: 1.2rem;
+	}
+}
+/* --- HERO FLOATING CONTAINERS --- */
+.hero__float-container {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	display: flex;
+	flex-direction: row;
+	gap: 2rem;
+	justify-content: center;
+	align-items: center;
+	z-index: 10;
+	width: 100%;
+	pointer-events: none;
+}
+
+.hero__float-box {
+	background: rgba(255, 255, 255, 0.85);
+	border-radius: 2rem;
+	width: 260px;
+	height: 260px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	box-shadow: 0 4px 32px 0 rgba(0,0,0,0.12);
+	padding: 2rem;
+	text-align: center;
+	transition: box-shadow 0.3s;
+	z-index: 11;
+	pointer-events: auto;
+}
+
+@media (max-width: 768px) {
+	.hero__float-container {
+		flex-direction: column;
+		gap: 1.5rem;
+		width: 100vw;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+	.hero__float-box {
+		width: 90vw;
+		max-width: 320px;
+		height: 180px;
+		padding: 1.2rem;
+	}
+}
 /* --- HERO CTA BUTTONS ON VIDEO --- */
 .hero__cta-box {
 	position: absolute;

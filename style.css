@@ -1,3 +1,110 @@
+/* --- HERO CTA BUTTONS ON VIDEO --- */
+.hero__cta-box {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background: #fff;
+	border-radius: 1.2rem;
+	box-shadow: 0 4px 32px 0 rgba(20,83,45,0.13);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 1.1rem;
+	padding: 2.2rem 2.5rem;
+	z-index: 4;
+	min-width: 220px;
+}
+.hero__cta-btn {
+	display: block;
+	width: 100%;
+	font-size: 1.18rem;
+	font-weight: 700;
+	text-align: center;
+	padding: 0.9em 2.2em;
+	border-radius: 2.5em;
+	border: none;
+	text-decoration: none;
+	transition: background 0.18s, color 0.18s, box-shadow 0.18s;
+	box-shadow: 0 2px 8px 0 rgba(20,83,45,0.08);
+	margin-bottom: 0.2em;
+}
+.hero__cta-btn--call {
+	background: var(--color-primary, #14532d);
+	color: #fff;
+}
+.hero__cta-btn--call:hover,
+.hero__cta-btn--call:focus {
+	background: #17643a;
+}
+.hero__cta-btn--book {
+	background: #e6f2ed;
+	color: #14532d;
+	border: 1.5px solid #b6e2d6;
+}
+.hero__cta-btn--book:hover,
+.hero__cta-btn--book:focus {
+	background: #d0ede0;
+	color: #14532d;
+}
+@media (max-width: 600px) {
+	.hero__cta-box {
+		padding: 1.2rem 0.7rem;
+		min-width: 0;
+		width: 90vw;
+		max-width: 340px;
+	}
+	.hero__cta-btn {
+		font-size: 1.05rem;
+		padding: 0.8em 1.2em;
+	}
+}
+
+/* --- HERO DESC SECTION --- */
+.hero-desc {
+	width: 100%;
+	background: #fff;
+	margin: 0 auto 0 auto;
+	padding: 2.5rem 0 2.2rem 0;
+	box-shadow: 0 4px 24px 0 rgba(20,83,45,0.07);
+}
+.hero-desc__container {
+	max-width: 700px;
+	margin: 0 auto;
+	text-align: center;
+}
+/* --- MOBILE NAV ACTIONS --- */
+.nav__mobile-actions {
+	display: none;
+	align-items: center;
+	gap: 0.7rem;
+}
+.nav__call--mobile {
+	display: flex;
+	align-items: center;
+	background: var(--color-primary, #14532d);
+	color: #fff;
+	border-radius: 50%;
+	width: 2.8rem;
+	height: 2.8rem;
+	justify-content: center;
+	box-shadow: 0 2px 8px 0 rgba(20,83,45,0.10);
+	transition: background 0.18s;
+	border: none;
+	padding: 0;
+}
+.nav__call--mobile:hover,
+.nav__call--mobile:focus {
+	background: #17643a;
+}
+@media (max-width: 900px) {
+	.nav__mobile-actions {
+		display: flex;
+	}
+	.nav__call {
+		display: none;
+	}
+}
 /* --- BADGES SECTION --- */
 .badges {
 	width: 100%;

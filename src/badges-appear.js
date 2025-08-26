@@ -1,17 +1,23 @@
 // Animowane pojawianie się wyróżnień na dole sekcji opisu (hero)
-(function() {
-  const badges = document.getElementById('badges');
-  if (!badges) return;
-  const items = badges.querySelectorAll('.badges__item');
-  let triggered = false;
-  function fadeInBadges() {
-    if (triggered) return;
-    if (window.scrollY === 0) return; // czekaj na faktyczny scroll
-    triggered = true;
-    items.forEach((item, i) => {
-      setTimeout(() => { item.classList.add('badge-visible'); }, i * 600);
+
+// Animates badges when their parent enters the viewport
+document.addEventListener('DOMContentLoaded', () => {
+  const container = document.querySelector('.badges__container');
+  if (!container) return;
+  const badges = container.querySelectorAll('.badges__item');
+
+  const observer = new IntersectionObserver((entries, obs) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        badges.forEach((badge, i) => {
+          setTimeout(() => {
+            badge.classList.add('badge-visible');
+          }, i * 180);
+        });
+        obs.disconnect();
+      }
     });
-    window.removeEventListener('scroll', fadeInBadges);
-  }
-  window.addEventListener('scroll', fadeInBadges);
-})();
+  }, { threshold: 0.3 });
+
+  observer.observe(container);
+});

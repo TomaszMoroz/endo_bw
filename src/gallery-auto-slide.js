@@ -1,14 +1,15 @@
 
 const images = [
   '/carousel/cabin2.jpeg',
-  '/carousel/office.jpeg',
-  '/carousel/entry.jpeg',
-  '/carousel/lobby2.jpeg',
-  '/carousel/coloSQR.jpeg',
-  '/carousel/cabin.jpeg',
+  '/carousel/corr.jpg',
+  '/carousel/kolo.jpg',
+  '/carousel/profoffice.jpg',
+  '/carousel/wroom.jpg',
+  // '/carousel/coloSQR.jpeg',
+  // '/carousel/cabin.jpeg',
   '/carousel/profesorz.jpeg',
-  '/carousel/waitingroom.jpeg',
-  '/carousel/lobby.jpeg'
+  // '/carousel/waitingroom.jpeg',
+  // '/carousel/lobby.jpeg'
 ];
 const alts = [
   'Wnętrze gabinetu Endonova',

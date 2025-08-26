@@ -1,3 +1,22 @@
+/* --- ORŁY MEDYCYNY W MENU MOBILNYM --- */
+.nav__orly-mobile {
+	display: none;
+}
+@media (max-width: 900px) {
+	.nav__orly-mobile {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding: 1.2rem 0 0.5rem 0;
+		width: 100%;
+	}
+	.nav__orly-mobile img {
+		max-width: 120px;
+		height: auto;
+		opacity: 0.92;
+		filter: drop-shadow(0 2px 8px rgba(20,83,45,0.10));
+	}
+}
 /* --- HERO DESC SECTION UNDER VIDEO --- */
 .hero-desc-section {
 	background: #fff;
@@ -54,7 +73,7 @@
 	display: block;
 	margin: 0 auto;
 	border-radius: 2rem;
-	background: rgba(255,255,255,0.85);
+	background: rgba(255,255,255,0.35);
 	box-shadow: 0 4px 32px 0 rgba(0,0,0,0.10);
 	padding: 2.5rem 2.5rem;
 	z-index: 11;

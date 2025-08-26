@@ -1,3 +1,33 @@
+/* --- BADGES SECTION --- */
+.badges {
+	width: 100%;
+	margin: 2.5rem auto 0 auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: none;
+}
+.badges__container {
+	display: flex;
+	flex-direction: row;
+	gap: 2.2rem;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+}
+.badges__item {
+	opacity: 0;
+	transform: translateY(30px) scale(0.98);
+	transition: opacity 0.7s cubic-bezier(.4,1.4,.6,1), transform 0.7s cubic-bezier(.4,1.4,.6,1);
+	will-change: opacity, transform;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.badge-visible {
+	opacity: 1 !important;
+	transform: translateY(0) scale(1) !important;
+}
 /* --- HERO VIDEO GRADIENT OVERLAY --- */
 .hero__video-gradient {
 	position: absolute;

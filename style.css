@@ -1,21 +1,43 @@
-/* --- ORŁY MEDYCYNY W MENU MOBILNYM --- */
-.nav__orly-mobile {
-	display: none;
-}
-@media (max-width: 900px) {
-	.nav__orly-mobile {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		padding: 1.2rem 0 0.5rem 0;
-		width: 100%;
-	}
-	.nav__orly-mobile img {
+@media (max-width: 700px) {
+			.badges__container {
+				display: grid;
+				grid-template-columns: 1fr 1fr;
+				grid-auto-rows: auto;
+				gap: 0.5rem 0;
+				justify-items: center;
+				align-items: center;
+				padding: 0;
+				margin: 0 auto;
+				width: 100vw;
+				max-width: 100vw;
+			}
+			.badges__container > div {
+				margin: 0;
+				padding: 0;
+				width: 100%;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
+	.badges__container img {
+		width: 120px;
 		max-width: 120px;
 		height: auto;
-		opacity: 0.92;
-		filter: drop-shadow(0 2px 8px rgba(20,83,45,0.10));
+		display: block;
+		margin: 0.2rem auto;
+		object-fit: contain;
 	}
+	/* Orły Medycyny badge larger on mobile */
+		.badges__container img[alt*="Orły Medycyny"],
+		.badges__container img[src*="orly"],
+		.badges__container img[src*="laureat300_black_pl.png"] {
+			width: 160px !important;
+			max-width: 160px !important;
+			height: 48px !important;
+			margin: 0.2rem auto !important;
+			display: block;
+			object-fit: contain;
+		}
 }
 /* --- HERO DESC SECTION UNDER VIDEO --- */
 .hero-desc-section {

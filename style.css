@@ -1,30 +1,33 @@
 /* --- HERO VIDEO BG --- */
+
 .hero {
 	position: relative;
 	overflow: hidden;
+	width: 100vw;
+	min-width: 100vw;
+	max-width: 100vw;
 }
 .hero__video-bg {
-			position: absolute;
-			top: 0;
-			left: 0;
-			width: 100%;
-			height: 100%;
-			z-index: 0;
-			pointer-events: none;
-			overflow: hidden;
-	}
-
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100%;
+	z-index: 0;
+	pointer-events: none;
+	overflow: hidden;
+}
 .hero__video {
-			width: 100%;
-			height: 100%;
-			object-fit: cover;
-			object-position: center;
-			min-width: 100%;
-			min-height: 100%;
-			filter: brightness(0.62) blur(1px);
-			position: absolute;
-			top: 0;
-			left: 0;
+	width: 100vw;
+	height: 100%;
+	object-fit: cover;
+	object-position: center;
+	min-width: 100vw;
+	min-height: 100%;
+	filter: brightness(0.62) blur(1px);
+	position: absolute;
+	top: 0;
+	left: 0;
 }
 .hero__container {
 	position: relative;

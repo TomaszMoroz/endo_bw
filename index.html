@@ -99,7 +99,7 @@
         </video>
       </div>
       <div class="hero__container hero__container--vertical">
-        <img src="/MKeller.png" alt="dr n. med. Marek Keller" class="hero__img" />
+        <!-- <img src="/MKeller.png" alt="dr n. med. Marek Keller" class="hero__img" /> -->
         <p class="hero__desc hero__desc--lead">
           Centrum Medyczne Endonova to nowoczesna placówka specjalizująca się w diagnostyce i leczeniu schorzeń przewodu
           pokarmowego.
@@ -108,102 +108,6 @@
           Oferujemy gastroskopię, kolonoskopię oraz konsultacje gastroenterologiczne na najwyższym poziomie – w
           komfortowych warunkach, z troską o bezpieczeństwo i spokój pacjenta.
         </p>
-        <div class="badges" id="badges">
-          <div class="badges__wrapper">
-            <div class="badges__item"><img src="/best2024.svg" alt="Najlepsza placówka 2024" /></div>
-            <div class="badges__item"><img src="/best2023.svg" alt="Najlepsza placówka 2023" /></div>
-            <div class="badges__item"><img src="/best2022.svg" alt="Najlepsza placówka 2022" /></div>
-            <div class="badges__item">
-              <a href="https://www.orlymedycyny.pl/profile-798438-centrum-medyczne-endonova" target="_blank"
-                rel="noopener">
-                <img src="https://www.orlymedycyny.pl/images/medals/798438/laureat300_black_pl.png"
-                  style="width:300px; height:75px; border:0;" alt="Centrum Medyczne Endonova - Gdynia"
-                  title="Centrum Medyczne Endonova - Gdynia">
-              </a>
-            </div>
-          </div>
-          <button class="badges-trophy-btn" id="badgesTrophyBtn" type="button" aria-label="Wyróżnienia">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
-              aria-hidden="true" style="vertical-align:middle;margin-right:0.7em;">
-              <path
-                d="M7 21h10M12 17v4M17 5V3a1 1 0 0 0-1-1H8a1 1 0 0 0-1 1v2M21 5h-4v2a5 5 0 0 1-10 0V5H3v2a7 7 0 0 0 14 0V5h4v2a7 7 0 0 1-14 0V5"
-                stroke="#14532d" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-            </svg>
-            Wyróżnienia
-            <style>
-              .badges-trophy-btn {
-                background: #fff !important;
-                color: #14532d !important;
-                border: 2px solid #14532d !important;
-                border-radius: 2em;
-                padding: 0.7em 1.7em;
-                font-weight: 600;
-                font-size: 1.1em;
-                box-shadow: 0 2px 8px 0 rgba(20, 83, 45, 0.08);
-                transition: background 0.2s, color 0.2s, border-color 0.2s;
-              }
-
-              .badges-trophy-btn:hover,
-              .badges-trophy-btn:focus {
-                background: #14532d !important;
-                color: #fff !important;
-                border-color: #166534 !important;
-              }
-            </style>
-          </button>
-          <!-- Modal with badges, hidden by default -->
-          <div class="modal-overlay modal-overlay--badges" id="badgesModalOverlay"></div>
-          <aside class="article-panel article-panel--badges" id="badgesModal" aria-modal="true" tabindex="-1"
-            role="dialog" style="display:none;">
-            <script>
-              document.addEventListener('DOMContentLoaded', function () {
-                var btn = document.getElementById('badgesTrophyBtn');
-                var modal = document.getElementById('badgesModal');
-                var overlay = document.getElementById('badgesModalOverlay');
-                var back = document.getElementById('badgesModalBack');
-                if (btn && modal && overlay && back) {
-                  btn.addEventListener('click', function () {
-                    modal.style.display = 'flex';
-                    overlay.style.display = 'block';
-                    overlay.classList.add('is-active');
-                    modal.classList.add('is-active');
-                  });
-                  back.addEventListener('click', function () {
-                    modal.style.display = 'none';
-                    overlay.style.display = 'none';
-                    overlay.classList.remove('is-active');
-                    modal.classList.remove('is-active');
-                  });
-                  overlay.addEventListener('click', function () {
-                    modal.style.display = 'none';
-                    overlay.style.display = 'none';
-                    overlay.classList.remove('is-active');
-                    modal.classList.remove('is-active');
-                  });
-                }
-              });
-            </script>
-            <button class="article-panel__close article-panel__close--badges" id="badgesModalBack" aria-label="Powrót">
-              <span style="font-size:1.3em;vertical-align:middle;line-height:1;">&larr;</span> Powrót
-            </button>
-            <div class="article-panel__content">
-              <h2 class="article-panel__title">Wyróżnienia</h2>
-              <div class="badges-modal__badges">
-                <div class="badges__item"><img src="/best2024.svg" alt="Najlepsza placówka 2024" /></div>
-                <div class="badges__item"><img src="/best2023.svg" alt="Najlepsza placówka 2023" /></div>
-                <div class="badges__item"><img src="/best2022.svg" alt="Najlepsza placówka 2022" /></div>
-                <div class="badges__item">
-                  <a href="https://www.orlymedycyny.pl/profile-798438-centrum-medyczne-endonova" target="_blank"
-                    rel="noopener">
-                    <img src="https://www.orlymedycyny.pl/images/medals/798438/laureat300_black_pl.png"
-                      style="width:300px; height:75px; border:0;" alt="Centrum Medyczne Endonova - Gdynia"
-                      title="Centrum Medyczne Endonova - Gdynia">
-                  </a>
-                </div>
-              </div>
-            </div>
-          </aside>
-        </div>
       </div>
 
     </section>
@@ -276,6 +180,8 @@
           </div>
         </div>
       </div>
+
+              
     </section>
 
     <!-- SEKCA KONTAKT -->

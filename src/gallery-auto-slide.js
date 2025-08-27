@@ -9,7 +9,7 @@ const images = [
   // '/carousel/cabin.jpeg',
   '/carousel/profesorz.jpeg',
   // '/carousel/waitingroom.jpeg',
-  // '/carousel/lobby.jpeg'
+  '/carousel/lobby2.jpeg'
 ];
 const alts = [
   'Wnętrze gabinetu Endonova',

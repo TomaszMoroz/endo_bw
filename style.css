@@ -1,3 +1,6 @@
+.contact-section__hours-day {
+	font-weight: 700;
+}
 @media (max-width: 700px) {
 			.badges__container {
 				display: grid;

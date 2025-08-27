@@ -88,26 +88,51 @@
 	}
 }
 /* --- HERO FLOATING LOGO --- */
-.hero__logo-float {
-	width: 240px;
-	max-width: 60vw;
-	height: auto;
+
+/* --- HERO WELCOME TEXT ON HERO VIDEO --- */
+.hero__welcome-text {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 12;
+	color: #fff;
+		/* no shadow, no background, no border radius, no blur */
+		padding: 0;
+	text-align: center;
+	font-family: inherit;
+	pointer-events: none;
+}
+
+.hero__welcome-line {
 	display: block;
-	margin: 0 auto;
-	border-radius: 2rem;
-	background: rgba(255,255,255,0.35);
-	box-shadow: 0 4px 32px 0 rgba(0,0,0,0.10);
-	padding: 2.5rem 2.5rem;
-	z-index: 11;
-	pointer-events: auto;
+}
+.hero__welcome-line--light {
+	font-family: 'Lato', Arial, sans-serif;
+	font-weight: 300;
+		font-size: 2rem;
+	letter-spacing: 0.08em;
+	margin-bottom: 0.2em;
+}
+.hero__welcome-line--bold {
+	font-family: 'Lato', Arial, sans-serif;
+	font-weight: 700;
+		font-size: 3.2rem;
+	letter-spacing: 0.01em;
+	margin-top: 0.1em;
 }
 
 @media (max-width: 768px) {
-	.hero__logo-float {
-		width: 70vw;
-		max-width: 320px;
-		padding: 1.2rem;
+	.hero__welcome-text {
+		padding: 0.8rem 1.1rem;
+		border-radius: 0.8rem;
 	}
+		.hero__welcome-line--light {
+			font-size: 1.2rem;
+		}
+		.hero__welcome-line--bold {
+			font-size: 2rem;
+		}
 }
 /* --- HERO FLOATING CONTAINERS --- */
 .hero__float-container {

@@ -422,7 +422,7 @@
 }
 .team__member:hover, .team__member:focus {
 	box-shadow: 0 8px 36px 0 rgba(20,83,45,0.13);
-	transform: translateY(-4px) scale(1.025);
+	transform: translateY(-8px) scale(1.07);
 	outline: none;
 }
 .team__photo-wrapper {

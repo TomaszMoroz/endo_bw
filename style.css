@@ -2264,8 +2264,9 @@ body {
 }
 @font-face {
 	  font-family: 'Lato';
-		src: url('/public/fonts/LatoLato-Regular.ttf') format('ttf'),
-				 url('/public/fonts/Lato-Regular.woff') format('woff');
+	  src: url('/public/fonts/Lato/Lato-Regular.ttf') format('truetype'),
+		  url('/public/fonts/Lato/Lato-Regular.woff2') format('woff2'),
+		  url('/public/fonts/Lato/Lato-Regular.woff') format('woff');
 	  font-weight: 400;
 	  font-style: normal;
 	  font-display: swap;
@@ -2273,8 +2274,9 @@ body {
 }
 @font-face {
 	  font-family: 'Lato';
-		src: url('/public/fonts/Lato-Bold.woff2') format('woff2'),
-				 url('/public/fonts/Lato-Bold.woff') format('woff');
+	  src: url('/public/fonts/Lato/Lato-Bold.ttf') format('truetype'),
+		  url('/public/fonts/Lato/Lato-Bold.woff2') format('woff2'),
+		  url('/public/fonts/Lato/Lato-Bold.woff') format('woff');
 	  font-weight: 700;
 	  font-style: normal;
 	  font-display: swap;
@@ -2288,7 +2290,7 @@ html {
 	font-weight: 300;
 }
 .nav__links a {
-	color: #1a237e;
+	 color: #111;
 	text-decoration: none;
 	font-size: 1.18rem;
 	font-weight: 600;

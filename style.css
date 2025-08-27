@@ -327,7 +327,7 @@
 	height: 100%;
 	pointer-events: none;
 	z-index: 2;
-	background: linear-gradient(180deg, #0d1b2a 0%, #14532d 100%);
+				background: linear-gradient(180deg, #0a2014 0%, #5ca96b 100%);
 	opacity: 0.62;
 }
 /* --- HERO VIDEO BG --- */

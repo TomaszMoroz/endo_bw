@@ -83,14 +83,29 @@
                   d="M22 16.92v3a2 2 0 0 1-2.18 2A19.86 19.86 0 0 1 3.08 4.18 2 2 0 0 1 5 2h3a2 2 0 0 1 2 1.72c.13 1.05.37 2.06.73 3.03a2 2 0 0 1-.45 2.11l-1.27 1.27a16 16 0 0 0 6.29 6.29l1.27-1.27a2 2 0 0 1 2.11-.45c.97.36 1.98.6 3.03.73A2 2 0 0 1 22 16.92z"
                   stroke="#14532d" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
               </svg>
-          <li><a href="https://www.znanylekarz.pl/marcin-keller-2/internista-gastrolog/gdynia" class="nav__book"
-              target="_blank" rel="noopener">Znany Lekarz
+          <li><a href="https://www.znanylekarz.pl/marcin-keller-2/internista-gastrolog/gdynia" class="nav__book nav__book--confirm"
+              target="_blank" rel="noopener">Umów wizytę
               <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
                 style="vertical-align:middle;margin-left:0.5em;">
                 <rect x="3" y="4" width="18" height="18" rx="2" stroke="#14532d" stroke-width="1.5" />
                 <path d="M16 2v4M8 2v4M3 10h18" stroke="#14532d" stroke-width="1.5" stroke-linecap="round" />
               </svg>
             </a></li>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        var bookLink = document.querySelector('.nav__book--confirm');
+        if(bookLink) {
+          bookLink.addEventListener('click', function(e) {
+            e.preventDefault();
+            pendingHref = bookLink.getAttribute('href');
+            modal.style.display = overlay.style.display = 'block';
+            modal.classList.add('is-active');
+            overlay.classList.add('is-active');
+            okBtn.focus();
+          });
+        }
+      });
+    </script>
         </ul>
 
       </div>
@@ -327,7 +342,7 @@
           <p>W razie potrzeby w trakcie badania pobierane są przy użyciu specjalnych sterylnych, jednorazowych narzędzi
             próbki (wycinki) ze zmian chorobowych, które przekazywane są następnie do oceny histopatologicznej.</p>
           <p>Zdarza się, że po badaniu występują zawroty głowy, zasłabnięcia, zaleca się pozostanie w placówce na ok. 30
-            min. W przypadku wykonywania kolonoskopii w analgosedacji zaleca się aby pacjent przybył na badanie z
+            min. W przypadku wykonywania kolonoskopii w analgosedacji zaleca się aby pacjent przybyła na badanie z
             osobą towarzyszącą.</p>
           <p>Powikłania zdarzają się niezmiernie rzadko (0,35%). Należą do nich perforacja (0,14-0,18%) lub krwawienie
             (0,008%). Jeżeli kolonoskopia wykonywana jest w analgosedacji, pacjent nie je i nie pije przez 2 godziny po
@@ -452,7 +467,7 @@
           <p>W razie potrzeby w trakcie badania pobierane są przy użyciu specjalnych sterylnych, jednorazowych narzędzi
             próbki (wycinki) ze zmian chorobowych, które przekazywane są następnie do oceny histopatologicznej.</p>
           <p>Zdarza się, że po badaniu występują zawroty głowy, zasłabnięcia, zaleca się pozostanie w placówce na ok. 30
-            min. W przypadku wykonywania kolonoskopii w analgosedacji zaleca się aby pacjent przychodziła na badanie z
+            min. W przypadku wykonywania kolonoskopii w analgosedacji zaleca się aby pacjent przybyła na badanie z
             osobą towarzyszącą.</p>
           <p>Powikłania zdarzają się niezmiernie rzadko (0,35%). Należą do nich perforacja (0,14-0,18%) lub krwawienie
             (0,008%). Jeżeli kolonoskopia wykonywana jest w analgosedacji, pacjent nie je i nie pije przez 2 godziny po
@@ -518,6 +533,65 @@
       });
     }
   </script>
+  <!-- MODAL: Umów wizytę info -->
+<div id="visitModalOverlay" class="modal-overlay" tabindex="-1" aria-hidden="true" style="display:none"></div>
+<div id="visitModal" class="modal" tabindex="-1" aria-modal="true" role="dialog" style="display:none">
+  <div class="modal__content">
+    <div class="modal__title">Informacja</div>
+    <div class="modal__desc">W przypadku braku wolnych terminów na portalu ZnanyLekarz prosimy o kontakt telefoniczny <b>517 787 788</b></div>
+    <div class="modal__actions">
+      <button id="visitModalOk" class="modal__btn modal__btn--ok">OK</button>
+      <button id="visitModalCancel" class="modal__btn modal__btn--cancel">Anuluj</button>
+    </div>
+  </div>
+</div>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var bookLink = document.querySelector('.nav__book--confirm');
+    var modal = document.getElementById('visitModal');
+    var overlay = document.getElementById('visitModalOverlay');
+    var okBtn = document.getElementById('visitModalOk');
+    var cancelBtn = document.getElementById('visitModalCancel');
+    let pendingHref = null;
+    if(bookLink && modal && overlay && okBtn && cancelBtn) {
+      bookLink.addEventListener('click', function(e) {
+        e.preventDefault();
+        pendingHref = bookLink.getAttribute('href');
+        modal.style.display = overlay.style.display = 'block';
+        modal.classList.add('is-active');
+        overlay.classList.add('is-active');
+        okBtn.focus();
+      });
+      okBtn.addEventListener('click', function() {
+        if (pendingHref) window.open(pendingHref, '_blank');
+        modal.style.display = overlay.style.display = 'none';
+        modal.classList.remove('is-active');
+        overlay.classList.remove('is-active');
+        pendingHref = null;
+      });
+      cancelBtn.addEventListener('click', function() {
+        modal.style.display = overlay.style.display = 'none';
+        modal.classList.remove('is-active');
+        overlay.classList.remove('is-active');
+        pendingHref = null;
+      });
+      overlay.addEventListener('click', function() {
+        modal.style.display = overlay.style.display = 'none';
+        modal.classList.remove('is-active');
+        overlay.classList.remove('is-active');
+        pendingHref = null;
+      });
+      document.addEventListener('keydown', function(e) {
+        if ((modal.classList.contains('is-active') || overlay.classList.contains('is-active')) && (e.key === 'Escape' || e.key === 'Esc')) {
+          modal.style.display = overlay.style.display = 'none';
+          modal.classList.remove('is-active');
+          overlay.classList.remove('is-active');
+          pendingHref = null;
+        }
+      });
+    }
+  });
+</script>
   <script type="module" src="/src/main.js"></script>
   <script type="module" src="/src/cookie-consent.js"></script>
   </body>

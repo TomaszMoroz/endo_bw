@@ -538,10 +538,9 @@
 <div id="visitModal" class="modal" tabindex="-1" aria-modal="true" role="dialog" style="display:none">
   <div class="modal__content">
     <div class="modal__title">Informacja</div>
-    <div class="modal__desc">W przypadku braku wolnych terminów na portalu ZnanyLekarz prosimy o kontakt telefoniczny <b>517 787 788</b></div>
+    <div class="modal__desc">W przypadku braku wolnych terminów na portalu ZnanyLekarz prosimy o kontakt telefoniczny <span class="modal__desc-phone"><b>517 787 788</b></span></div>
     <div class="modal__actions">
       <button id="visitModalOk" class="modal__btn modal__btn--ok">OK</button>
-      <button id="visitModalCancel" class="modal__btn modal__btn--cancel">Anuluj</button>
     </div>
   </div>
 </div>
@@ -551,9 +550,8 @@
     var modal = document.getElementById('visitModal');
     var overlay = document.getElementById('visitModalOverlay');
     var okBtn = document.getElementById('visitModalOk');
-    var cancelBtn = document.getElementById('visitModalCancel');
     let pendingHref = null;
-    if(bookLink && modal && overlay && okBtn && cancelBtn) {
+    if(bookLink && modal && overlay && okBtn) {
       bookLink.addEventListener('click', function(e) {
         e.preventDefault();
         pendingHref = bookLink.getAttribute('href');
@@ -564,12 +562,6 @@
       });
       okBtn.addEventListener('click', function() {
         if (pendingHref) window.open(pendingHref, '_blank');
-        modal.style.display = overlay.style.display = 'none';
-        modal.classList.remove('is-active');
-        overlay.classList.remove('is-active');
-        pendingHref = null;
-      });
-      cancelBtn.addEventListener('click', function() {
         modal.style.display = overlay.style.display = 'none';
         modal.classList.remove('is-active');
         overlay.classList.remove('is-active');

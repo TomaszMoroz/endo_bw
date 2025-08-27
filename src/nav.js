@@ -37,3 +37,27 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   }
 });
+
+// --- SMOOTH SCROLL WITH NAVBAR OFFSET ---
+document.addEventListener('DOMContentLoaded', function () {
+  const nav = document.querySelector('.nav--main');
+  const navLinks = document.querySelectorAll('.nav__links a[href^="#"]');
+  if (!nav || !navLinks.length) return;
+  navLinks.forEach(link => {
+    link.addEventListener('click', function (e) {
+      const hash = link.getAttribute('href');
+      if (!hash || hash === '#') return;
+      const target = document.querySelector(hash);
+      if (target) {
+        e.preventDefault();
+        const navHeight = nav.offsetHeight;
+        const targetRect = target.getBoundingClientRect();
+        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        const top = targetRect.top + scrollTop - navHeight;
+        window.scrollTo({ top, behavior: 'smooth' });
+        // Aktualizuj hash w adresie URL (bez skoku)
+        history.replaceState(null, '', hash);
+      }
+    });
+  });
+});

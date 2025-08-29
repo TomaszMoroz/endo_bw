@@ -2,12 +2,12 @@
 const images = [
   '/carousel/cabin2.jpeg',
   '/carousel/corr.jpg',
-  '/carousel/kolo.jpg',
+  // '/carousel/kolo.jpg',
   '/carousel/profoffice.jpg',
   '/carousel/wroom.jpg',
-  // '/carousel/coloSQR.jpeg',
-  // '/carousel/cabin.jpeg',
-  '/carousel/profesorz.jpeg',
+  '/carousel/zabiegowy.jpg',
+  '/carousel/recepcja.jpg',
+  '/carousel/poczekalnia.jpg',
   // '/carousel/waitingroom.jpeg',
   '/carousel/lobby2.jpeg'
 ];

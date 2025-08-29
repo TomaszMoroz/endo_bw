@@ -1,3 +1,8 @@
+/* Remove all lines between opening hours */
+.contact-section__hours-list li,
+.contact-section__hours-item {
+	border-bottom: none !important;
+}
 /* === RODO MODAL PDF LINKS === */
 .rodo-modal__pdf-list {
 	list-style: none;

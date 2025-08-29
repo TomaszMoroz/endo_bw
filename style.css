@@ -981,7 +981,7 @@ footer.site-footer {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	filter: grayscale(1);
+	/* filter: grayscale(1); */
 	transition: color 0.18s, filter 0.18s, transform 0.18s;
 }
 .site-footer__socials a svg,

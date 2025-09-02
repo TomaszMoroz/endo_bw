@@ -1,26 +1,28 @@
 
 const images = [
-  '/carousel/cabin2.jpeg',
-  '/carousel/corr.jpg',
-  // '/carousel/kolo.jpg',
-  '/carousel/profoffice.jpg',
+  '/carousel/entry.jpeg',
+  '/carousel/award.jpg',
+  '/carousel/lobby2.jpeg',
   '/carousel/wroom.jpg',
-  '/carousel/zabiegowy.jpg',
-  '/carousel/recepcja.jpg',
-  '/carousel/poczekalnia.jpg',
-  // '/carousel/waitingroom.jpeg',
-  '/carousel/lobby2.jpeg'
+  '/carousel/waitingroom.jpg',
+  '/carousel/profoffice.jpg',
+  '/carousel/endo.jpg',
+  '/carousel/endoroom1.jpg',
+  '/carousel/endoroom2.jpg',
+  // '/carousel/recepcja.jpg',
+  // '/carousel/poczekalnia.jpg',
+  // // '/carousel/waitingroom.jpeg',
+  // '/carousel/lobby2.jpeg'
 ];
 const alts = [
-  'Wnętrze gabinetu Endonova',
-  'Gabinet Endonova',
-  'Wejście do Endonova',
+  'Wejscie do Endonova',
+  'Nagroda Orly Medycyny',
   'Poczekalnia Endonova',
-  'Kolonoskopia Endonova',
-  'Gabinet Endonova 2',
-  'Lekarz Endonova',
-  'Poczekalnia 2 Endonova',
-  'Lobby Endonova'
+  'Poczekalnia Endonova 2',
+  'Gabinet',
+  'Logo',
+  'Gabinet Zabiegowy',
+  'Gabinet ',
 ];
 let current = 0;
 

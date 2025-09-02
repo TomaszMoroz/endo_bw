@@ -1,4 +1,5 @@
 
+
 const images = [
   '/carousel/entry.jpeg',
   '/carousel/award.jpg',
@@ -9,14 +10,11 @@ const images = [
   '/carousel/endo.jpg',
   '/carousel/endoroom1.jpg',
   '/carousel/endoroom2.jpg',
-  // '/carousel/recepcja.jpg',
-  // '/carousel/poczekalnia.jpg',
-  // // '/carousel/waitingroom.jpeg',
-  // '/carousel/lobby2.jpeg'
 ];
 const alts = [
   'Wejscie do Endonova',
   'Nagroda Orly Medycyny',
+  'Recepcja Endonova',
   'Poczekalnia Endonova',
   'Poczekalnia Endonova 2',
   'Gabinet',
@@ -25,6 +23,13 @@ const alts = [
   'Gabinet ',
 ];
 let current = 0;
+
+// Preload all images at startup
+const preloadedImages = [];
+for (let i = 0; i < images.length; i++) {
+  preloadedImages[i] = new window.Image();
+  preloadedImages[i].src = images[i];
+}
 
 function ready(fn) {
   if (document.readyState !== 'loading') fn();
@@ -37,29 +42,23 @@ ready(() => {
   img.style.opacity = 1;
   img.style.transform = 'translateX(0)';
 
+
   function show(idx) {
-    // Tylko na mobile: płynna animacja z preloadem
     if (window.matchMedia('(max-width: 700px)').matches) {
-      // Preload nowego obrazka
-      const preload = new window.Image();
-      preload.src = images[idx];
-      preload.onload = () => {
-        // Wyjazd starego w lewo
+      // Mobile: always animate, don't wait for image load
+      img.style.transition = 'transform 0.5s cubic-bezier(.4,0,.2,1), opacity 0.3s';
+      img.style.transform = 'translateX(-100vw)';
+      img.style.opacity = 0;
+      setTimeout(() => {
+        img.src = images[idx];
+        img.alt = alts[idx];
+        img.style.transition = 'none';
+        img.style.transform = 'translateX(100vw)';
+        void img.offsetWidth;
         img.style.transition = 'transform 0.5s cubic-bezier(.4,0,.2,1), opacity 0.3s';
-        img.style.transform = 'translateX(-100vw)';
-        img.style.opacity = 0;
-        setTimeout(() => {
-          // Podmień src i wróć z prawej
-          img.src = images[idx];
-          img.alt = alts[idx];
-          img.style.transition = 'none';
-          img.style.transform = 'translateX(100vw)';
-          void img.offsetWidth; // reflow
-          img.style.transition = 'transform 0.5s cubic-bezier(.4,0,.2,1), opacity 0.3s';
-          img.style.opacity = 1;
-          img.style.transform = 'translateX(0)';
-        }, 500);
-      };
+        img.style.opacity = 1;
+        img.style.transform = 'translateX(0)';
+      }, 500);
     } else {
       // Desktop: stara animacja
       img.style.transition = 'none';

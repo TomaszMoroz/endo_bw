@@ -1,6 +1,6 @@
 # Centrum Medyczne Endonova - Specjalistyczne badania endoskopowe
 
-Nowoczesna strona internetowa dla Centrum Medycznego Endonova - specjalistycznej placówki medycznej koncentrującej się na badaniach endoskopowych przewodu pokarmowego.
+strona internetowa dla Centrum Medycznego Endonova - specjalistycznej placówki medycznej koncentrującej się na badaniach endoskopowych przewodu pokarmowego.
 
 ## 🎯 Funkcjonalności
 
@@ -14,24 +14,15 @@ Nowoczesna strona internetowa dla Centrum Medycznego Endonova - specjalistycznej
 ## 🏗️ Technologie
 
 - **Vite** - szybki bundler i dev server
-- **Vanilla JavaScript ES6+** - nowoczesny JavaScript bez frameworków
+- **Vanilla JavaScript ES6+** - JavaScript bez frameworków
 - **CSS3** - wykorzystanie Grid, Flexbox, Custom Properties
-- **HTML5** - semantyczny markup
-- **Progressive Enhancement** - działanie bez JavaScript
-
-## 🎨 Cechy designu
-
-- **Paleta kolorów**: Profesjonalne odcienie niebieskiego z dodatkami
-- **Typografia**: Inter font dla optymalnej czytelności
-- **Ikony**: SVG dla ostrości na wszystkich rozdzielczościach
-- **Animacje**: Subtelne przejścia i mikrointerakcje
-- **Układ**: Mobile-first responsive design
+- **HTML5** - semantyczny 
 
 ## 📱 Sekcje strony
 
 1. **Hero** - Nagłówek z głównym przekazem i statystykami
 2. **Usługi** - Karty usług medycznych z ikonami
-3. **O nas** - Informacje o centrum i wartości
+3. **O nas** - Informacje o centrum
 4. **Kontakt** - Dane kontaktowe i formularz umówienia wizyty
 5. **Stopka** - Dodatkowe informacje i linki
 
@@ -92,36 +83,4 @@ Edytuj zmienne CSS w pliku \`src/style.css\`:
   --color-secondary: #f0f9ff;
   /* ... */
 }
-\`\`\`
-
-### Zmiana treści
-Edytuj zawartość w pliku \`index.html\` lub dodaj nowe sekcje.
-
-### Dodawanie funkcjonalności
-Rozszerz klasę \`MedicalCenterApp\` w pliku \`src/main.js\`.
-
-## 📊 Performance
-
-- **Lighthouse Score**: 90+ we wszystkich kategoriach
-- **Core Web Vitals**: Optymalizacja dla LCP, FID, CLS
-- **Bundle Size**: Minimalizowany i zoptymalizowany
-- **Image Optimization**: SVG i optymalizowane assety
-
-## 🛡️ Bezpieczeństwo
-
-- Sanityzacja formularzy
-- HTTPS ready
-- Content Security Policy ready
-- GDPR compliance considerations
-
-## 📄 Licencja
-
-Ten projekt jest utworzony dla centrum medycznego i zawiera przykładowe treści. Dostosuj zgodnie z potrzebami i wymaganiami prawnymi.
-
-## 🤝 Wsparcie
-
-W przypadku pytań lub problemów, skontaktuj się z zespołem deweloperskim.
-
----
-
-**Strona została stworzona z dbałością o najwyższe standardy jakości i użyteczności dla branży medycznej.**
+\`\`\

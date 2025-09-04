@@ -1,16 +1,33 @@
 
 
-const images = [
-  '/carousel/entry.jpeg',
-  '/carousel/award.jpg',
-  '/carousel/lobby2.jpeg',
-  '/carousel/wroom.jpg',
-  '/carousel/waitingroom.jpg',
-  '/carousel/profoffice.jpg',
-  '/carousel/endo.jpg',
-  '/carousel/endoroom1.jpg',
-  '/carousel/endoroom2.jpg',
+const baseImages = [
+  'dawn.jpg',
+  'award.jpg',
+  'recepcja.jpg',
+  'waitingroom.jpg',
+  'poczekalnia.jpg',
+  'clock.jpg',
+  'profoffice.jpg',
+  'endo.jpg',
+  'endoroom2.jpg',
+  'prof.jpg'
 ];
+
+function getImagesForDevice() {
+  if (window.matchMedia('(max-width: 700px)').matches) {
+    // Mobile: use /mobile/ and add 'm' before extension, always .jpeg
+    return baseImages.map(name => {
+      const dotIdx = name.lastIndexOf('.');
+      const base = name.substring(0, dotIdx);
+      return `/carousel/mobile/${base}m.jpeg`;
+    });
+  } else {
+    // Desktop: use /carousel/ as before
+    return baseImages.map(name => `/carousel/${name}`);
+  }
+}
+
+let images = getImagesForDevice();
 const alts = [
   'Wejscie do Endonova',
   'Nagroda Orly Medycyny',
@@ -25,11 +42,16 @@ const alts = [
 let current = 0;
 
 // Preload all images at startup
-const preloadedImages = [];
-for (let i = 0; i < images.length; i++) {
-  preloadedImages[i] = new window.Image();
-  preloadedImages[i].src = images[i];
+let preloadedImages = [];
+function preloadAll() {
+  images = getImagesForDevice();
+  preloadedImages = [];
+  for (let i = 0; i < images.length; i++) {
+    preloadedImages[i] = new window.Image();
+    preloadedImages[i].src = images[i];
+  }
 }
+preloadAll();
 
 function ready(fn) {
   if (document.readyState !== 'loading') fn();
@@ -37,10 +59,24 @@ function ready(fn) {
 }
 
 ready(() => {
+
   const img = document.querySelector('.gallery__img');
   if (!img) return;
   img.style.opacity = 1;
   img.style.transform = 'translateX(0)';
+
+  // On resize, reload images if device type changes
+  let lastIsMobile = window.matchMedia('(max-width: 700px)').matches;
+  window.addEventListener('resize', () => {
+    const isMobile = window.matchMedia('(max-width: 700px)').matches;
+    if (isMobile !== lastIsMobile) {
+      preloadAll();
+      current = 0;
+      img.src = images[0];
+      img.alt = alts[0];
+      lastIsMobile = isMobile;
+    }
+  });
 
 
   function show(idx) {

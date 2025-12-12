@@ -3,6 +3,7 @@
 const baseImages = [
   'dawn.jpg',
   'award.jpg',
+  'orly25.jpg',
   'recepcja.jpg',
   'waitingroom.jpg',
   'poczekalnia.jpg',
@@ -31,13 +32,14 @@ let images = getImagesForDevice();
 const alts = [
   'Wejscie do Endonova',
   'Nagroda Orly Medycyny',
+  'Orły Medycyny 2025',
   'Recepcja Endonova',
   'Poczekalnia Endonova',
   'Poczekalnia Endonova 2',
   'Gabinet',
   'Logo',
   'Gabinet Zabiegowy',
-  'Gabinet ',
+  'Gabinet '
 ];
 let current = 0;
 

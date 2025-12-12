@@ -1,3 +1,27 @@
+@media (min-width: 701px) {
+	.badges__row-mobile {
+		display: flex;
+		flex-direction: row;
+		gap: 1.2rem;
+		justify-content: center;
+		width: 100%;
+	}
+	.badges__row-mobile > div {
+		margin-bottom: 0;
+	}
+}
+@media (max-width: 700px) {
+	.badges__row-mobile {
+		display: flex;
+		flex-direction: row;
+		gap: 1.2rem;
+		justify-content: center;
+		width: 100%;
+	}
+	.badges__row-mobile > div {
+		margin-bottom: 0;
+	}
+}
 /* Remove all lines between opening hours */
 .contact-section__hours-list li,
 .contact-section__hours-item {
@@ -1134,57 +1158,50 @@ footer.site-footer {
 			}
 }
 @media (max-width: 700px) {
-	.badges {
-		display: flex !important;
-		flex-direction: column !important;
-		align-items: center !important;
-		justify-content: center !important;
-		width: 100vw !important;
-		position: static !important;
-		left: unset !important;
-		right: unset !important;
-		bottom: unset !important;
-		margin: 2.5rem 0 0 0 !important;
-		gap: 0.7rem !important;
-		z-index: 2 !important;
-	}
-	.badges__container {
-		display: flex !important;
-		flex-direction: column !important;
-		align-items: center !important;
-		gap: 0.7rem !important;
-		width: 100vw !important;
-		justify-content: center !important;
-		flex-wrap: nowrap !important;
-		padding: 0 !important;
-		margin: 0 !important;
-	}
-	.badges__item {
-		width: 100% !important;
-		max-width: 150px !important;
-		min-width: 120px !important;
-		min-height: 60px !important;
-		max-height: 60px !important;
-		box-sizing: border-box !important;
-		margin-bottom: 0.5rem !important;
-		text-align: center !important;
-		opacity: 1 !important;
-		pointer-events: auto !important;
-		animation: none !important;
-		transform: none !important;
-		padding: 0.4rem 0.5rem !important;
-		display: flex !important;
-		flex-direction: column !important;
-		align-items: center !important;
-		justify-content: center !important;
-	}
-	.badges__item img {
-		max-height: 44px !important;
-		max-width: 110px !important;
-		width: auto !important;
-		height: auto !important;
-		display: block !important;
-		margin: 0 auto !important;
+		.badges__wrapper {
+			display: none !important;
+		}
+		.badges {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			width: 100vw;
+			position: static;
+			left: unset;
+			right: unset;
+			bottom: unset;
+			margin: 2.5rem 0 0 0;
+			gap: 0.7rem;
+			z-index: 2;
+		}
+		.badges-trophy-btn {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			gap: 0.7em;
+			margin-inline: auto !important;
+			   margin-top: 4.5rem;
+			padding: 0.6rem 2.2rem;
+			font-size: 1.13rem;
+			font-weight: 600;
+			background: #fff;
+			border: 1.5px solid #222;
+			border-radius: 1.2rem;
+			color: #222;
+			cursor: pointer;
+			box-shadow: 0 2px 12px 0 rgba(0,0,0,0.07);
+			transition: background 0.18s, color 0.18s, box-shadow 0.18s;
+			width: 70vw;
+			max-width: 340px;
+			letter-spacing: 0.01em;
+		}
+	.badges-trophy-btn:active,
+	.badges-trophy-btn:focus {
+		background: #f2f2f2;
+		color: #111;
+		outline: none;
+		box-shadow: 0 4px 24px 0 rgba(0,0,0,0.13);
 	}
 }
 @media (min-width: 701px) {

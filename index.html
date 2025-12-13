@@ -114,10 +114,22 @@
 
     <section class="hero">
       <div class="hero__video-bg">
-        <video autoplay muted loop playsinline preload="auto" class="hero__video" poster="/logo.png">
-          <source src="/promo/endonova.mp4" type="video/mp4" />
+        <video id="heroVideo" autoplay muted loop playsinline preload="auto" class="hero__video" poster="/logo.png">
+          <source id="heroVideoSource" src="/promo/endonova.mp4" type="video/mp4" />
           Twoja przeglądarka nie obsługuje wideo HTML5.
         </video>
+        <script>
+          // Zamień źródło na zoptymalizowane na mobile
+          document.addEventListener('DOMContentLoaded', function() {
+            var isMobile = window.matchMedia('(max-width: 700px)').matches;
+            var video = document.getElementById('heroVideo');
+            var source = document.getElementById('heroVideoSource');
+            if (isMobile && video && source) {
+              source.src = '/promo/endonova-optimized.mp4';
+              video.load();
+            }
+          });
+        </script>
         <div class="hero__video-gradient"></div>
         <div class="hero__float-container">
           <div class="hero__welcome-text">

@@ -108,6 +108,18 @@ document.head.appendChild(animationStyles)
 
 // Initialize the app when DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
+  // Popup z informacją o godzinach otwarcia
+  var popup = document.getElementById('popup-info');
+  var closeBtn = document.getElementById('popup-info-close');
+  // Pokazuj popup tylko do 05.03.2026 włącznie, natychmiast na wszystkich urządzeniach
+  var today = new Date();
+  var lastDay = new Date(2026, 2, 5, 23, 59, 59); // miesiące 0-indexowane: 2 = marzec
+  if (popup && closeBtn && today <= lastDay) {
+    popup.style.display = 'flex';
+    closeBtn.addEventListener('click', function() {
+      popup.style.display = 'none';
+    });
+  }
   // Overlays: gastroskopia, kolonoskopia
   const overlays = ['gastroskopia', 'kolonoskopia'];
   overlays.forEach(id => {

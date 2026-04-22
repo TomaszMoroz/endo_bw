@@ -34,12 +34,37 @@
 
     </div>
   </div>
-  <!-- <div id="popup-info" class="popup-info" style="display: none;">
-    <div class="popup-info__content">
-      <p>Drodzy pacjenci – informujemy, że w dniach <strong>04-05.03.2026</strong> CM Endonova czynne będzie w godzinach <strong>08:00 – 13:00</strong>.</p>
-      <button id="popup-info-close" class="popup-info__close">Zamknij</button>
+  <div id="popup-info" class="popup-info" aria-hidden="true">
+    <div class="popup-info__backdrop" data-popup-close></div>
+    <div class="popup-info__content" role="dialog" aria-modal="true" aria-labelledby="popup-info-title">
+      <div class="popup-info__notice" role="note" aria-label="Ważna informacja organizacyjna">
+        <span class="popup-info__notice-icon" aria-hidden="true">!</span>
+        <p class="popup-info__message"><strong>Szanowni Państwo, uprzejmie informujemy, że w czwartek 23.04 Centrum Medyczne Endonova będzie nieczynne.</strong></p>
+      </div>
+      <p id="popup-info-title" class="popup-info__title">Oferta pracy</p>
+      <details class="popup-info__job">
+        <summary class="popup-info__job-title">Do naszego Zespołu poszukujemy Pielęgniarki&nbsp;/ Pielęgniarza endoskopowego.</summary>
+        <div class="popup-info__job-body">
+          <p>Praca na pełen etat w placówce medycznej w Gdyni (badania komercyjne).</p>
+          <p><strong>Zakres obowiązków:</strong></p>
+          <ul>
+            <li>asysta przy badaniach endoskopowych,</li>
+            <li>przygotowanie gabinetu i stanowiska pracy do badań,</li>
+            <li>udział w procedurach związanych z badaniami: kolonoskopia i gastroskopia w znieczuleniu ogólnym, gastroskopia w znieczuleniu miejscowym,</li>
+            <li>mycie oraz dezynfekcja endoskopów z wykorzystaniem myjni endoskopowej,</li>
+            <li>przestrzeganie procedur higienicznych, sanitarnych i organizacyjnych obowiązujących w placówce.</li>
+          </ul>
+          <p><strong>Wymagania:</strong></p>
+          <ul>
+            <li>aktualne prawo wykonywania zawodu pielęgniarki / pielęgniarza,</li>
+            <li>ukończony kurs endoskopii.</li>
+          </ul>
+        </div>
+      </details>
+      <p class="popup-info__apply">Zgłoszenia prosimy przesyłać na adres: <a href="mailto:recepcja@endonova.pl">recepcja@endonova.pl</a></p>
+      <button id="popup-info-close" class="popup-info__close" type="button">Zamknij</button>
     </div>
-  </div> -->
+  </div>
   <main>
     <nav class="nav nav--main">
       <div class="nav__overlay" id="navOverlay"></div>

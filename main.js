@@ -108,18 +108,33 @@ document.head.appendChild(animationStyles)
 
 // Initialize the app when DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
-  // // Popup z informacją o godzinach otwarcia
-  // var popup = document.getElementById('popup-info');
-  // var closeBtn = document.getElementById('popup-info-close');
-  // // Pokazuj popup tylko do 05.03.2026 włącznie, natychmiast na wszystkich urządzeniach
-  // var today = new Date();
-  // var lastDay = new Date(2026, 2, 5, 23, 59, 59); // miesiące 0-indexowane: 2 = marzec
-  // if (popup && closeBtn && today <= lastDay) {
-  //   popup.style.display = 'flex';
-  //   closeBtn.addEventListener('click', function() {
-  //     popup.style.display = 'none';
-  //   });
-  // }
+  const popup = document.getElementById('popup-info');
+  const closeBtn = document.getElementById('popup-info-close');
+  const popupCloseTargets = document.querySelectorAll('[data-popup-close]');
+
+  if (popup && closeBtn) {
+    const closePopup = () => {
+      popup.classList.remove('popup-info--visible');
+      popup.setAttribute('aria-hidden', 'true');
+      document.body.classList.remove('popup-info-open');
+    };
+
+    popup.classList.add('popup-info--visible');
+    popup.setAttribute('aria-hidden', 'false');
+    document.body.classList.add('popup-info-open');
+    closeBtn.focus();
+
+    closeBtn.addEventListener('click', closePopup);
+    popupCloseTargets.forEach(target => {
+      target.addEventListener('click', closePopup);
+    });
+    document.addEventListener('keydown', event => {
+      if (event.key === 'Escape' && popup.classList.contains('popup-info--visible')) {
+        closePopup();
+      }
+    });
+  }
+
   // Overlays: gastroskopia, kolonoskopia
   const overlays = ['gastroskopia', 'kolonoskopia'];
   overlays.forEach(id => {

@@ -372,6 +372,7 @@
 	justify-content: center;
 	align-items: center;
 	flex-wrap: wrap;
+	margin-bottom: 1rem;
 }
 .badges__item {
 	opacity: 0;

@@ -819,12 +819,21 @@ body.cookie-banner-active {
 	transform: translateY(0) scale(1);
 }
 
+.popup-info__image {
+	width: 100%;
+	height: auto;
+	border-radius: 0.8rem;
+	margin-bottom: 1rem;
+	display: block;
+}
+
 .popup-info__title {
 	margin: 0 0 1rem;
 	color: #14532d;
 	font-size: clamp(1.5rem, 3vw, 2rem);
 	font-weight: 800;
 	letter-spacing: 0.01em;
+	text-align: center;
 }
 
 .popup-info__notice {

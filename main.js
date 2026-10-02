@@ -120,9 +120,9 @@ document.addEventListener('DOMContentLoaded', () => {
       const now = new Date();
       const hideFrom = new Date(2026, 9, 4); // od niedzieli 04.10.2026 komunikat ukryty
       if (now < hideFrom) {
-        hoursNoticeText.textContent = now < new Date(2026, 9, 3)
-          ? 'W piątek 02.10 Centrum czynne do godz. 13:00. W sobotę 03.10 Centrum nieczynne.'
-          : 'W sobotę 03.10 Centrum nieczynne.';
+        hoursNoticeText.innerHTML = 'Informujemy, że dnia 02/10 CM ENDONOVA będzie czynne do godziny 13:00.<br>' +
+          'W sobotę, 03/10 Centrum Medyczne będzie nieczynne. Zapraszamy od 06/10 (wtorek).<br><br>' +
+          'Pozdrawiamy,<br>Zespół CM ENDONOVA';
         hoursNotice.style.display = 'flex';
       }
     }

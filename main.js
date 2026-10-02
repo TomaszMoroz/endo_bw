@@ -121,8 +121,8 @@ document.addEventListener('DOMContentLoaded', () => {
       const hideFrom = new Date(2026, 9, 4); // od niedzieli 04.10.2026 komunikat ukryty
       if (now < hideFrom) {
         hoursNoticeText.textContent = now < new Date(2026, 9, 3)
-          ? 'Dzisiaj Centrum czynne do godz. 13:00. Jutro (sobota, 03.10) Centrum nieczynne.'
-          : 'Dzisiaj (sobota, 03.10) Centrum nieczynne.';
+          ? 'W piątek 02.10 Centrum czynne do godz. 13:00. W sobotę 03.10 Centrum nieczynne.'
+          : 'W sobotę 03.10 Centrum nieczynne.';
         hoursNotice.style.display = 'flex';
       }
     }

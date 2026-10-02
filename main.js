@@ -113,6 +113,20 @@ document.addEventListener('DOMContentLoaded', () => {
   const popupCloseTargets = document.querySelectorAll('[data-popup-close]');
 
   if (popup && closeBtn) {
+    // Komunikat o zmienionych godzinach – widoczny tylko do 03.10.2026 włącznie
+    const hoursNotice = document.getElementById('popup-hours-notice');
+    const hoursNoticeText = document.getElementById('popup-hours-notice-text');
+    if (hoursNotice && hoursNoticeText) {
+      const now = new Date();
+      const hideFrom = new Date(2026, 9, 4); // od niedzieli 04.10.2026 komunikat ukryty
+      if (now < hideFrom) {
+        hoursNoticeText.textContent = now < new Date(2026, 9, 3)
+          ? 'Dzisiaj Centrum czynne do godz. 13:00. Jutro (sobota, 03.10) Centrum nieczynne.'
+          : 'Dzisiaj (sobota, 03.10) Centrum nieczynne.';
+        hoursNotice.style.display = 'flex';
+      }
+    }
+
     const closePopup = () => {
       popup.classList.remove('popup-info--visible');
       popup.setAttribute('aria-hidden', 'true');

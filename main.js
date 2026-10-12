@@ -113,16 +113,15 @@ document.addEventListener('DOMContentLoaded', () => {
   const popupCloseTargets = document.querySelectorAll('[data-popup-close]');
 
   if (popup && closeBtn) {
-    // Komunikat o zmienionych godzinach – widoczny tylko do 03.10.2026 włącznie
+    // Komunikat o zmienionych godzinach – widoczny tylko do 13.10.2026 włącznie
     const hoursNotice = document.getElementById('popup-hours-notice');
     const hoursNoticeText = document.getElementById('popup-hours-notice-text');
     if (hoursNotice && hoursNoticeText) {
       const now = new Date();
-      const hideFrom = new Date(2026, 9, 4); // od niedzieli 04.10.2026 komunikat ukryty
+      const hideFrom = new Date(2026, 9, 14); // od środy 14.10.2026 komunikat ukryty
       if (now < hideFrom) {
-        hoursNoticeText.innerHTML = 'Informujemy, że dnia 02/10 CM ENDONOVA będzie czynne do godziny 13:00.<br>' +
-          'W sobotę, 03/10 Centrum Medyczne będzie nieczynne. Zapraszamy od 06/10 (wtorek).<br><br>' +
-          'Pozdrawiamy,<br>Zespół CM ENDONOVA';
+        hoursNoticeText.innerHTML = 'Informujemy, że dnia 13.10 (wtorek) C.M. Endonova będzie czynne w godzinach 8:00–13:00.<br><br>' +
+          'Pozdrawiamy';
         hoursNotice.style.display = 'flex';
       }
     }
